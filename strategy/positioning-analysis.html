@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Marketing Factory — Positioning Analysis</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #ffffff;
+  --text: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #8888a0;
+  --border: #e8e8f0;
+  --accent: #003366;
+  --accent2: #0066cc;
+  --green: #00875a;
+  --red: #cc3333;
+  --orange: #cc7700;
+  --blue: #0052cc;
+  --card-bg: #f7f8fa;
+  --highlight: #003366;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Slide system */
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 48px 64px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+.slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Navigation */
+.nav {
+  position: fixed;
+  bottom: 24px;
+  right: 32px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+.nav button {
+  width: 40px; height: 40px;
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+.nav button:hover { background: var(--card-bg); border-color: var(--accent); }
+.slide-counter {
+  position: fixed;
+  bottom: 30px;
+  left: 32px;
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+  z-index: 100;
+}
+
+/* McKinsey-style typography */
+.slide-header {
+  border-bottom: 3px solid var(--accent);
+  padding-bottom: 12px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.slide-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.slide-tag {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.slide-body { flex: 1; overflow: hidden; }
+
+/* Cover slide */
+.cover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  padding: 80px;
+}
+.cover .cover-badge {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 24px;
+}
+.cover h1 {
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  max-width: 700px;
+}
+.cover .cover-sub {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+.cover .cover-meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+}
+.cover .cover-line {
+  width: 60px;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  margin: 24px auto;
+}
+.cover .fw-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
+}
+.cover .fw-tags span {
+  font-size: 10px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 4px;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Divider slide */
+.divider-slide {
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 120px;
+  background: var(--card-bg);
+}
+.divider-slide .div-num {
+  font-size: 72px;
+  font-weight: 900;
+  color: var(--accent);
+  opacity: 0.15;
+  line-height: 1;
+  margin-bottom: -10px;
+}
+.divider-slide .div-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+.divider-slide .div-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Tables - McKinsey style */
+.mckinsey-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.mckinsey-table thead th {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--accent);
+}
+.mckinsey-table thead th:last-child {
+  background: var(--green);
+  border-color: var(--green);
+}
+.mckinsey-table tbody td {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
+.mckinsey-table tbody tr:nth-child(even) { background: #f9fafb; }
+.mckinsey-table .s-high { color: var(--green); font-weight: 800; text-align: center; }
+.mckinsey-table .s-mid { color: var(--orange); font-weight: 600; text-align: center; }
+.mckinsey-table .s-low { color: var(--red); font-weight: 600; text-align: center; }
+.mckinsey-table .s-us { color: var(--green); font-weight: 900; text-align: center; font-size: 15px; }
+
+/* ERRC Grid */
+.errc { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; height: 100%; }
+.errc-box {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  position: relative;
+}
+.errc-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 100%;
+  border-radius: 4px 0 0 4px;
+}
+.errc-box.el::before { background: var(--red); }
+.errc-box.re::before { background: var(--orange); }
+.errc-box.ra::before { background: var(--blue); }
+.errc-box.cr::before { background: var(--green); }
+.errc-label {
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.errc-box.el .errc-label { color: var(--red); }
+.errc-box.re .errc-label { color: var(--orange); }
+.errc-box.ra .errc-label { color: var(--blue); }
+.errc-box.cr .errc-label { color: var(--green); }
+.errc-box ul { list-style: none; }
+.errc-box li {
+  font-size: 14px;
+  padding: 5px 0;
+  padding-left: 14px;
+  position: relative;
+  color: var(--text);
+  line-height: 1.4;
+}
+.errc-box li::before {
+  content: '';
+  position: absolute; left: 0; top: 12px;
+  width: 5px; height: 5px; border-radius: 50%;
+}
+.errc-box.el li::before { background: var(--red); }
+.errc-box.re li::before { background: var(--orange); }
+.errc-box.ra li::before { background: var(--blue); }
+.errc-box.cr li::before { background: var(--green); }
+
+/* Forces */
+.forces { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.force-box {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px;
+  border-top: 3px solid;
+}
+.force-box.push { border-top-color: var(--red); }
+.force-box.pull { border-top-color: var(--green); }
+.force-box.habit { border-top-color: var(--orange); }
+.force-box.anxiety { border-top-color: var(--blue); }
+.force-label {
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+.force-box.push .force-label { color: var(--red); }
+.force-box.pull .force-label { color: var(--green); }
+.force-box.habit .force-label { color: var(--orange); }
+.force-box.anxiety .force-label { color: var(--blue); }
+.force-box p { font-size: 13px; line-height: 1.5; color: var(--text-secondary); }
+
+/* Keyword box */
+.kw-center {
+  text-align: center;
+  padding: 48px;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+.kw-pre { font-size: 11px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 3px; margin-bottom: 12px; }
+.kw-word { font-size: 56px; font-weight: 900; color: var(--accent); letter-spacing: 6px; }
+.kw-post { font-size: 14px; color: var(--text-secondary); margin-top: 14px; line-height: 1.5; max-width: 420px; margin-left: auto; margin-right: auto; }
+
+/* Repo table */
+.repo-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.repo-table th {
+  background: var(--accent);
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 1px solid var(--accent);
+}
+.repo-table td {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  vertical-align: top;
+}
+.repo-table tr:nth-child(even) { background: #f9fafb; }
+
+/* BrandScript */
+.bs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.bs-cell {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 14px 16px;
+}
+.bs-cell.full { grid-column: 1 / -1; }
+.bs-lbl {
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent2);
+  margin-bottom: 5px;
+}
+.bs-val { font-size: 13px; color: var(--text); line-height: 1.4; }
+
+/* Naming */
+.nm-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.nm-row.rec { background: rgba(0,51,102,0.04); border-left: 3px solid var(--accent); }
+.nm-num {
+  width: 28px; height: 28px;
+  background: var(--card-bg);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 12px; color: var(--accent);
+  flex-shrink: 0;
+}
+.nm-row.rec .nm-num { background: var(--accent); color: #fff; }
+.nm-name { font-weight: 800; font-size: 17px; color: var(--accent); min-width: 160px; }
+.nm-desc { font-size: 13px; color: var(--text-secondary); flex: 1; }
+
+/* Offer cards */
+.offers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.off-card {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  border-top: 3px solid var(--accent);
+}
+.off-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.off-name { font-weight: 800; font-size: 13px; color: var(--accent); }
+.off-tag {
+  font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  padding: 2px 8px; border-radius: 2px;
+  background: var(--card-bg); color: var(--text-muted);
+}
+.off-quote {
+  font-size: 13px; font-style: italic; color: var(--text);
+  border-left: 2px solid var(--accent2); padding-left: 12px;
+  margin-bottom: 10px; line-height: 1.4;
+}
+.off-pills { display: flex; flex-wrap: wrap; gap: 4px; }
+.off-pills span {
+  font-size: 9px; font-weight: 700; padding: 2px 6px;
+  background: rgba(0,135,90,0.08); color: var(--green); border-radius: 2px;
+}
+
+/* Quote */
+.mckinsey-quote {
+  border-left: 4px solid var(--accent);
+  padding: 20px 24px;
+  background: var(--card-bg);
+  font-size: 18px;
+  font-style: italic;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 20px 0;
+  max-width: 700px;
+}
+
+/* Takeaway */
+.takeaway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+.tk-card {
+  border-top: 3px solid var(--accent);
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 0 0 4px 4px;
+}
+.tk-num { font-size: 32px; font-weight: 900; color: var(--accent); opacity: 0.2; margin-bottom: 4px; }
+.tk-title { font-size: 14px; font-weight: 800; color: var(--accent); margin-bottom: 6px; }
+.tk-text { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+/* Print */
+@media print {
+  .nav, .slide-counter { display: none; }
+  .slide { position: relative; opacity: 1; pointer-events: auto; page-break-after: always; height: 100vh; }
+  body { overflow: visible; }
+}
+</style>
+</head>
+<body>
+
+<!-- SLIDE 0: Cover -->
+<div class="slide cover active" data-slide="0">
+  <div class="cover-badge">Confidential</div>
+  <h1>AI Marketing Factory</h1>
+  <div class="cover-line"></div>
+  <div class="cover-sub">Стратегический анализ позиционирования<br>vs 4 конкурента</div>
+  <div class="cover-meta">Март 2026 &middot; v1.0</div>
+  <div class="fw-tags">
+    <span>Schwartz</span>
+    <span>Christensen / JTBD</span>
+    <span>StoryBrand</span>
+    <span>Sugarman</span>
+    <span>Cialdini</span>
+    <span>Blue Ocean</span>
+    <span>Trout / Ries</span>
+  </div>
+</div>
+
+<!-- SLIDE 1: Divider - Strategy Canvas -->
+<div class="slide divider-slide" data-slide="1">
+  <div class="div-num">01</div>
+  <div class="div-title">Strategy Canvas</div>
+  <div class="div-desc">Сравнительный анализ по 9 ключевым факторам конкуренции vs Lofty AOS, NoimosAI, Luxury Presence, Styldod</div>
+</div>
+
+<!-- SLIDE 2: Strategy Canvas table -->
+<div class="slide" data-slide="2">
+  <div class="slide-header">
+    <div class="slide-title">Strategy Canvas: AI Marketing Factory vs конкуренты</div>
+    <div class="slide-tag">Blue Ocean Strategy</div>
+  </div>
+  <div class="slide-body">
+    <table class="mckinsey-table">
+      <thead>
+        <tr>
+          <th style="width:28%">Фактор</th>
+          <th>Lofty AOS</th>
+          <th>NoimosAI</th>
+          <th>Luxury Presence</th>
+          <th>Styldod</th>
+          <th>AMF</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Фокус на застройщиках</strong></td><td class="s-low">0</td><td class="s-low">0</td><td class="s-low">0</td><td class="s-low">1</td><td class="s-us">10</td></tr>
+        <tr><td><strong>Полный цикл маркетинга</strong></td><td class="s-mid">5</td><td class="s-low">3</td><td class="s-mid">4</td><td class="s-low">2</td><td class="s-us">10</td></tr>
+        <tr><td><strong>Рынки Bali / Dubai / TH / RU</strong></td><td class="s-low">0</td><td class="s-low">2</td><td class="s-low">1</td><td class="s-low">3</td><td class="s-us">10</td></tr>
+        <tr><td><strong>AI-автоматизация</strong></td><td class="s-mid">4</td><td class="s-high">8</td><td class="s-low">2</td><td class="s-mid">5</td><td class="s-us">9</td></tr>
+        <tr><td><strong>Человеческая экспертиза</strong></td><td class="s-low">2</td><td class="s-low">1</td><td class="s-mid">6</td><td class="s-low">1</td><td class="s-us">10</td></tr>
+        <tr><td><strong>Стратегия + аналитика</strong></td><td class="s-low">3</td><td class="s-low">2</td><td class="s-low">3</td><td class="s-low">0</td><td class="s-us">9</td></tr>
+        <tr><td><strong>Креативы</strong></td><td class="s-low">2</td><td class="s-low">1</td><td class="s-high">8</td><td class="s-mid">7</td><td class="s-us">8</td></tr>
+        <tr><td><strong>Трафик + оптимизация</strong></td><td class="s-mid">6</td><td class="s-low">2</td><td class="s-low">3</td><td class="s-low">0</td><td class="s-us">9</td></tr>
+        <tr><td><strong>Прозрачность</strong></td><td class="s-mid">4</td><td class="s-low">2</td><td class="s-low">3</td><td class="s-low">1</td><td class="s-us">10</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px; font-size:14px; color:var(--green); font-weight:700;">Вывод: ни один конкурент не закрывает полный цикл для застройщиков. White space подтверждён.</p>
+  </div>
+</div>
+
+<!-- SLIDE 3: Divider - ERRC -->
+<div class="slide divider-slide" data-slide="3">
+  <div class="div-num">02</div>
+  <div class="div-title">ERRC-матрица</div>
+  <div class="div-desc">Blue Ocean Strategy: что устранить, сократить, усилить и создать для выхода из красного океана</div>
+</div>
+
+<!-- SLIDE 4: ERRC -->
+<div class="slide" data-slide="4">
+  <div class="slide-header">
+    <div class="slide-title">ERRC: четыре действия для создания голубого океана</div>
+    <div class="slide-tag">Blue Ocean Strategy</div>
+  </div>
+  <div class="slide-body">
+    <div class="errc">
+      <div class="errc-box el">
+        <div class="errc-label">Eliminate</div>
+        <ul>
+          <li>Раздутый штат (15 &rarr; 3 + AI)</li>
+          <li>Непрозрачность расходов и метрик</li>
+          <li>Универсальность (обслуживаем все отрасли)</li>
+          <li>Зависимость от MLS (US only)</li>
+        </ul>
+      </div>
+      <div class="errc-box re">
+        <div class="errc-label">Reduce</div>
+        <ul>
+          <li>Стоимость маркетинга (&minus;50% от in-house)</li>
+          <li>Срок запуска (3 мес &rarr; 2 недели)</li>
+          <li>Зависимость от одного специалиста</li>
+          <li>Циклы согласований и итераций</li>
+        </ul>
+      </div>
+      <div class="errc-box ra">
+        <div class="errc-label">Raise</div>
+        <ul>
+          <li>Скорость производства контента (&times;5)</li>
+          <li>Прозрачность (100% дашборд, real-time)</li>
+          <li>Экспертиза в девелоперском маркетинге</li>
+          <li>Качество и глубина аналитики</li>
+        </ul>
+      </div>
+      <div class="errc-box cr">
+        <div class="errc-label">Create</div>
+        <ul>
+          <li>Категория "встроенная AI-команда для застройщиков"</li>
+          <li>Покрытие Bali / Dubai / Thailand / Russia</li>
+          <li>Полный цикл: стратегия &rarr; креативы &rarr; трафик &rarr; аналитика</li>
+          <li>Гибрид: AI (80% рутины) + эксперты (контроль)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 5: Divider - JTBD -->
+<div class="slide divider-slide" data-slide="5">
+  <div class="div-num">03</div>
+  <div class="div-title">JTBD-анализ</div>
+  <div class="div-desc">Jobs to be Done: какую "работу" застройщик нанимает маркетинг выполнять и какие силы влияют на переключение</div>
+</div>
+
+<!-- SLIDE 6: JTBD -->
+<div class="slide" data-slide="6">
+  <div class="slide-header">
+    <div class="slide-title">Jobs to be Done: работа застройщика + 4 силы</div>
+    <div class="slide-tag">Christensen / Moesta</div>
+  </div>
+  <div class="slide-body">
+    <table class="repo-table" style="margin-bottom:24px;">
+      <thead><tr><th style="width:20%">Тип работы</th><th>Описание</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Функциональная</strong></td><td>Генерировать квалифицированные лиды, снижать CPL, системно заполнять воронку продаж</td></tr>
+        <tr><td><strong>Эмоциональная</strong></td><td>Контроль ("я вижу цифры в реальном времени"), спокойствие ("система работает без моего участия")</td></tr>
+        <tr><td><strong>Социальная</strong></td><td>Выглядеть профессионально перед покупателями, уверенно отчитываться перед инвесторами</td></tr>
+      </tbody>
+    </table>
+    <div class="forces">
+      <div class="force-box push">
+        <div class="force-label">Push (от старого)</div>
+        <p>CPL растёт каждый квартал. Кадры текут &mdash; средний маркетолог работает 14 мес. Креативы выгорают за 5 дней. Нет единой системы аналитики.</p>
+      </div>
+      <div class="force-box pull">
+        <div class="force-label">Pull (к новому)</div>
+        <p>&minus;50% стоимость vs in-house. &times;5 скорость производства. Дашборд в реальном времени. Система не зависит от одного человека.</p>
+      </div>
+      <div class="force-box habit">
+        <div class="force-label">Habit (инерция)</div>
+        <p>"У нас свой отдел, мы его 2 года растили." "Наше агентство нормальное, просто рынок тяжёлый." "AI &mdash; это хайп."</p>
+      </div>
+      <div class="force-box anxiety">
+        <div class="force-label">Anxiety (тревога)</div>
+        <p>"AI испортит бренд." "Потеряем контроль над маркетингом." "3 человека не заменят 15." "Нашу специфику не поймут."</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 7: Divider - Positioning -->
+<div class="slide divider-slide" data-slide="7">
+  <div class="div-num">04</div>
+  <div class="div-title">Позиционирование</div>
+  <div class="div-desc">Trout/Ries + Schwartz: какое слово мы занимаем в разуме клиента и как репозиционируем конкурентов</div>
+</div>
+
+<!-- SLIDE 8: Key word -->
+<div class="slide" data-slide="8">
+  <div class="slide-header">
+    <div class="slide-title">Ключевое слово позиционирования</div>
+    <div class="slide-tag">Trout / Ries</div>
+  </div>
+  <div class="slide-body" style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+    <div style="display:flex; gap:32px; margin-bottom:40px;">
+      <div style="text-align:center; border:1px solid var(--border); padding:20px 32px; border-radius:4px;">
+        <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Awareness</div>
+        <div style="font-size:28px; font-weight:900; color:var(--accent);">Level 2&ndash;3</div>
+        <div style="font-size:11px; color:var(--text-muted);">Problem &rarr; Solution Aware</div>
+      </div>
+      <div style="text-align:center; border:1px solid var(--border); padding:20px 32px; border-radius:4px;">
+        <div style="font-size:10px; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:4px;">Sophistication</div>
+        <div style="font-size:28px; font-weight:900; color:var(--accent);">Stage 2&ndash;3</div>
+        <div style="font-size:11px; color:var(--text-muted);">Нужен механизм</div>
+      </div>
+    </div>
+    <div class="kw-center">
+      <div class="kw-pre">Слово, которым мы владеем</div>
+      <div class="kw-word">ВСТРОЕННАЯ</div>
+      <div class="kw-post">Не внешнее агентство, не инструмент &mdash; часть вашей команды, только умнее, быстрее и дешевле</div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: Repositioning -->
+<div class="slide" data-slide="9">
+  <div class="slide-header">
+    <div class="slide-title">Репозиционирование конкурентов</div>
+    <div class="slide-tag">Trout / Ries</div>
+  </div>
+  <div class="slide-body">
+    <table class="repo-table">
+      <thead>
+        <tr><th style="width:20%">Конкурент</th><th style="width:25%">Их позиция</th><th>Наш repositioning</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Lofty AOS</strong></td>
+          <td style="color:var(--text-muted)">CRM + реклама для агентов. US only.</td>
+          <td><em>"Lofty помогает агентам продавать чужие объекты. Мы &mdash; застройщикам продавать СВОИ."</em></td>
+        </tr>
+        <tr>
+          <td><strong>NoimosAI</strong></td>
+          <td style="color:var(--text-muted)">Generic AI-платформа для всех.</td>
+          <td><em>"Универсальный AI &mdash; как универсальный хирург: звучит красиво, никого не лечит."</em></td>
+        </tr>
+        <tr>
+          <td><strong>Luxury Presence</strong></td>
+          <td style="color:var(--text-muted)">Красивые сайты для luxury-агентов.</td>
+          <td><em>"Красивый сайт &mdash; витрина. А кто приводит людей в магазин?"</em></td>
+        </tr>
+        <tr>
+          <td><strong>Styldod</strong></td>
+          <td style="color:var(--text-muted)">Визуальные инструменты для RE.</td>
+          <td><em>"Styldod даёт кисти. Мы рисуем картину."</em></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 10: BrandScript -->
+<div class="slide" data-slide="10">
+  <div class="slide-header">
+    <div class="slide-title">StoryBrand BrandScript</div>
+    <div class="slide-tag">Donald Miller / SB7</div>
+  </div>
+  <div class="slide-body">
+    <div class="bs-grid">
+      <div class="bs-cell">
+        <div class="bs-lbl">Герой</div>
+        <div class="bs-val">Коммерческий директор / руководитель маркетинга застройщика</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">Проводник</div>
+        <div class="bs-val">Эмпатия + авторитет: 3 эксперта с опытом в девелопменте + AI-система</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">External Problem</div>
+        <div class="bs-val">Маркетинг дорогой, медленный, лиды дорожают каждый квартал</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">Internal Problem</div>
+        <div class="bs-val">"Я не контролирую свой маркетинг. Каждый раз когда кто-то увольняется &mdash; страшно"</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">Philosophical</div>
+        <div class="bs-val">Застройщик заслуживает маркетинга, который работает так же надёжно, как его здания</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">План (3 шага)</div>
+        <div class="bs-val">1) Аудит за 48ч &rarr; 2) Встраиваем за 2 нед &rarr; 3) Дашборд в реальном времени</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">Failure</div>
+        <div class="bs-val">CPL продолжит расти. Следующий уволившийся обрушит воронку на 2&ndash;3 месяца</div>
+      </div>
+      <div class="bs-cell">
+        <div class="bs-lbl">Success</div>
+        <div class="bs-val">CPL &minus;50% за 3 мес. Система не зависит от людей. 100% прозрачность</div>
+      </div>
+      <div class="bs-cell full">
+        <div class="bs-lbl">CTA</div>
+        <div class="bs-val" style="font-size:16px; font-weight:700; color:var(--accent);">"Получите аудит за 48 часов"</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11: One-Liner -->
+<div class="slide" data-slide="11">
+  <div class="slide-header">
+    <div class="slide-title">One-Liner</div>
+    <div class="slide-tag">StoryBrand</div>
+  </div>
+  <div class="slide-body" style="display:flex; align-items:center; justify-content:center;">
+    <div class="mckinsey-quote" style="font-size:22px; max-width:750px;">
+      "Большинство застройщиков платят за отдел маркетинга из 10&ndash;15 человек, а получают дорогие лиды и нулевую прозрачность. Мы встраиваем AI-команду экспертов, которая работает быстрее, системнее и дешевле. Наши клиенты снижают CPL в 2 раза за 3 месяца."
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 12: Divider - Naming -->
+<div class="slide divider-slide" data-slide="12">
+  <div class="div-num">05</div>
+  <div class="div-title">Нейминг</div>
+  <div class="div-desc">7 вариантов по правилам Trout/Ries: описательное, короткое, произносимое, ownable</div>
+</div>
+
+<!-- SLIDE 13: Naming -->
+<div class="slide" data-slide="13">
+  <div class="slide-header">
+    <div class="slide-title">Варианты нейминга</div>
+    <div class="slide-tag">Trout / Ries</div>
+  </div>
+  <div class="slide-body">
+    <div class="nm-row rec"><div class="nm-num">1</div><div class="nm-name">BuiltIn</div><div class="nm-desc">"Built in" = встроенный. Намёк на стройку (built). Premium-звучание. Точное отражение позиционирования.</div></div>
+    <div class="nm-row"><div class="nm-num">2</div><div class="nm-name">DevForce</div><div class="nm-desc">Dev (developer) + Force (сила). Чёткая привязка к ICP &mdash; девелоперы.</div></div>
+    <div class="nm-row"><div class="nm-num">3</div><div class="nm-name">MarketLayer</div><div class="nm-desc">Layer = слой, встраивается в бизнес. Техническая метафора интеграции.</div></div>
+    <div class="nm-row"><div class="nm-num">4</div><div class="nm-name">PropelDev</div><div class="nm-desc">Propel (ускорять) + Dev. Энергичное, с глаголом.</div></div>
+    <div class="nm-row"><div class="nm-num">5</div><div class="nm-name">FloorPlan</div><div class="nm-desc">Двойной смысл: план этажа + план/стратегия.</div></div>
+    <div class="nm-row"><div class="nm-num">6</div><div class="nm-name" style="font-size:14px">AI Marketing Factory</div><div class="nm-desc">Factory = конвейер, системность. Минус: generic "AI Marketing".</div></div>
+    <div class="nm-row"><div class="nm-num">7</div><div class="nm-name">StackDev</div><div class="nm-desc">Stack технологий + Dev. Современное, хорошо для international.</div></div>
+  </div>
+</div>
+
+<!-- SLIDE 14: Divider - Offers -->
+<div class="slide divider-slide" data-slide="14">
+  <div class="div-num">06</div>
+  <div class="div-title">Рекламные офферы</div>
+  <div class="div-desc">7 вариантов по уровням осведомлённости (Schwartz) с принципами убеждения (Cialdini)</div>
+</div>
+
+<!-- SLIDE 15: Offers 1-4 -->
+<div class="slide" data-slide="15">
+  <div class="slide-header">
+    <div class="slide-title">Офферы: холодный аутрич</div>
+    <div class="slide-tag">Schwartz + Cialdini</div>
+  </div>
+  <div class="slide-body">
+    <div class="offers-grid">
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Аудит убийц CPL</div><div class="off-tag">Problem-Aware</div></div>
+        <div class="off-quote">"Ваш таргетолог сливает 30% бюджета на нерелевантный трафик. Вот как это исправить за 48 часов."</div>
+        <div class="off-pills"><span>Social Proof</span><span>Reciprocity</span><span>Authority</span></div>
+      </div>
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Замена отдела</div><div class="off-tag">Solution-Aware</div></div>
+        <div class="off-quote">"Отдел из 15 человек за 1.5 млн/мес &mdash; или 3 эксперта + AI за 200К. Результат одинаковый. Скорость &times;5."</div>
+        <div class="off-pills"><span>Contrast</span><span>Scarcity</span><span>Authority</span></div>
+      </div>
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Кадровая катастрофа</div><div class="off-tag">Problem-Aware</div></div>
+        <div class="off-quote">"Когда ваш маркетолог уволится &mdash; а он уволится &mdash; воронка встанет на 2&ndash;3 месяца."</div>
+        <div class="off-pills"><span>Loss Aversion</span><span>Commitment</span><span>Reciprocity</span></div>
+      </div>
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Bali / Dubai Developer</div><div class="off-tag">International</div></div>
+        <div class="off-quote">"Building in Bali? Your marketing shouldn't depend on a freelancer who disappears in rainy season."</div>
+        <div class="off-pills"><span>Authority</span><span>Social Proof</span><span>Liking</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 16: Offers 5-7 -->
+<div class="slide" data-slide="16">
+  <div class="slide-header">
+    <div class="slide-title">Офферы: тёплый + горячий трафик</div>
+    <div class="slide-tag">Schwartz + Cialdini</div>
+  </div>
+  <div class="slide-body">
+    <div class="offers-grid">
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Прозрачность</div><div class="off-tag">Solution-Aware</div></div>
+        <div class="off-quote">"Ваше агентство присылает отчёт раз в месяц. Мы даём дашборд в реальном времени. Почувствуйте разницу."</div>
+        <div class="off-pills"><span>Contrast</span><span>Commitment</span><span>Authority</span></div>
+      </div>
+      <div class="off-card">
+        <div class="off-head"><div class="off-name">Конвейер креативов</div><div class="off-tag">Problem-Aware</div></div>
+        <div class="off-quote">"Ваш дизайнер делает 3 баннера в неделю. Наша система &mdash; 50. Каждый адаптирован под аудиторию."</div>
+        <div class="off-pills"><span>Social Proof</span><span>Liking</span><span>Authority</span></div>
+      </div>
+      <div class="off-card" style="grid-column: 1/-1;">
+        <div class="off-head"><div class="off-name">14 дней до результата</div><div class="off-tag">Most-Aware</div></div>
+        <div class="off-quote">"Через 14 дней &mdash; первые лиды. Через 90 &mdash; снижение CPL в 2 раза. Или мы не берём деньги за первый месяц."</div>
+        <div class="off-pills"><span>Scarcity (5 мест)</span><span>Commitment</span><span>Reciprocity (гарантия)</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 17: Key Takeaways -->
+<div class="slide" data-slide="17">
+  <div class="slide-header">
+    <div class="slide-title">Ключевые выводы</div>
+    <div class="slide-tag">Summary</div>
+  </div>
+  <div class="slide-body">
+    <div class="takeaway-grid">
+      <div class="tk-card">
+        <div class="tk-num">01</div>
+        <div class="tk-title">Новая категория</div>
+        <div class="tk-text">"Встроенная AI-команда маркетинга для застройщиков" &mdash; категория, которой не существует. Мы первые.</div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-num">02</div>
+        <div class="tk-title">Слово: ВСТРОЕННАЯ</div>
+        <div class="tk-text">Агентство = внешнее. Инструмент = сам делай. Мы = встроенные. Это наш Volvo&nbsp;=&nbsp;"безопасность".</div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-num">03</div>
+        <div class="tk-title">White space</div>
+        <div class="tk-text">Ни один из 4 конкурентов не обслуживает застройщиков. Zero coverage в RU, Bali, Dubai, Thailand.</div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-num">04</div>
+        <div class="tk-title">JTBD: контроль</div>
+        <div class="tk-text">Главная эмоциональная работа &mdash; контроль и спокойствие. Push сильный: дорого, медленно, кадры текут.</div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-num">05</div>
+        <div class="tk-title">Механизм: гибрид</div>
+        <div class="tk-text">AI делает 80% рутины, 3 эксперта контролируют качество. Это механизм для Stage 3 по Шварцу.</div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-num">06</div>
+        <div class="tk-title">Вход: бесплатный аудит</div>
+        <div class="tk-text">48-часовой аудит = Reciprocity (Cialdini) + Foot-in-the-door (Commitment) + снятие Anxiety (JTBD).</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="slide-counter"><span id="current">1</span> / <span id="total">18</span></div>
+<div class="nav">
+  <button onclick="go(-1)">&larr;</button>
+  <button onclick="go(1)">&rarr;</button>
+</div>
+
+<script>
+let cur = 0;
+const slides = document.querySelectorAll('.slide');
+const total = slides.length;
+document.getElementById('total').textContent = total;
+
+function show(n) {
+  slides.forEach(s => s.classList.remove('active'));
+  cur = Math.max(0, Math.min(n, total - 1));
+  slides[cur].classList.add('active');
+  document.getElementById('current').textContent = cur + 1;
+}
+
+function go(d) { show(cur + d); }
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); go(1); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); go(-1); }
+});
+
+// Touch
+let tx = 0;
+document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; });
+document.addEventListener('touchend', e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (Math.abs(dx) > 50) go(dx < 0 ? 1 : -1);
+});
+
+show(0);
+</script>
+</body>
+</html>

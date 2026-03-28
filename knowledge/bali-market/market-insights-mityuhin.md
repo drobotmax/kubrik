@@ -1,9 +1,9 @@
 # Market Insights - Alexandr Mityuhin Channel
 
-**Updated with transcript analysis (9 videos deep-analyzed, March 2026)**
+**Updated with transcript analysis (32 videos deep-analyzed, March 2026)**
 
 Source: YouTube [@alexandrmityuhin](https://www.youtube.com/@alexandrmityuhin) - Bali real estate broker/analyst, founder of Blackpoint agency
-30 videos analyzed (Jun 2025 - Mar 2026), 550-19,600 views each
+32 videos analyzed (Jun 2025 - Mar 2026), 550-19,600 views each
 
 ## Channel Profile
 
@@ -38,31 +38,37 @@ Source: YouTube [@alexandrmityuhin](https://www.youtube.com/@alexandrmityuhin) -
 - Risk: investors who rented informally face disruption
 - **Management companies take 20-25% commission**, some up to 30%
 - **Self-management yields 30-50% more** than management company but requires presence
-- **Construction cost benchmark: $1,500/m2** for quality build
+- **Construction cost benchmark: $1,500/m2** basic quality, **$3,000/m2** all-in for experienced developers
 
 ### 3. Developer Reliability Varies Hugely
 **Reviewed developers (with insights):**
 
-| Developer | Key Insight from Channel |
-|-----------|------------------------|
-| Alex Villas | Most viewed video (5.3K). Complex 6 delays confirmed, penalty ROI paid. Complex 7 prices dropped 20% post-launch. Expanding to Melasti (Complex 9). Leasehold issues. |
-| PARQ/Domogatsky | SCANDAL: lawsuit, Guzeeva case, 19.6K views (biggest video). Ubud project conflict with locals, AMDAL violations. Reputation damage to entire Bali market. |
-| SWOI | Project FROZEN. Investors stuck. Garden project halted, money not returned. Attempting restart. 3.2K views. |
-| Bali Baza | Largest Russian developer on Bali. 500+ units across projects. Sunset Village = SCANDAL (delays, investor complaints, quality issues). Origins Nuanu: $4,500-5,000/m2, Dusit as hotel operator. Kedungu potential unclear. Problem: too many projects simultaneously, management stretched thin. Company restructuring after Sunset Village. |
-| Sansara (Pandawa) | Rebranded from Ecolit. Pandawa Residence: 64 villas + 91 apartments, 70% sold. 8% guaranteed yield first 2 years. 24-year leasehold extendable to 49. Location: Pandawa beach (Bukit). Concerns: short track record, marketing-heavy. Positives: good location, reasonable pricing, clear financial model. In-house management, not international operator. |
-| Predmet | Kaba-Kaba Village: 47-year leasehold (longest on market for new projects). $250K for 2BR villa. 17% management fee. Own construction factory (prefab elements). Warranty covers full leasehold term. Concrete/industrial aesthetic. Small focused developer (unlike Baza with too many projects). |
-| Vibe Development (NAI) | First escrow in Bali. Medical resort Nusa Dua. Risk: medical infra complexity. |
-| Loya/Bondar | 1000+ units in construction. Co-development model. 3 projects simultaneously - capacity concern raised by subscribers. Black PR from competitors. Plans for SEA expansion. |
-| HQC | Ardhana, Bloom, Satori projects. Partnership with Accor (not yet signed). 8% guaranteed yield on Bloom. Rapid growth raises questions. |
-| Teos Group | Amani Melasti + Ramada Nusa Dua. 15 years with Wyndham. Expanding to Maldives. Family business gone international. Considered reliable by Mityuhin. |
-| Anta Group | Medispa project near BVLGARI Resort. Freehold at $7K/m2 (premium). Ramada Encore in Canggu. |
-| OXO | The Bank - freehold $830K. Premium quality benchmark. Good management company reputation. |
-| BIOM | Nuanu ecosystem. Connected to Potato Head. $500K for top villas. Quality control via Jejak group. |
-| Nexa | Umalas townhouse dropped to $209K (was $290K) - 28% discount. |
-| Lyvin | Melasti reviewed in stay-test |
-| Almal | Dubai developer entering Bali. Short leasehold. Nusa Dua location "unlucky for developers." |
-| BREIG | Edem 2 at $100K in Nusa Dua - quality concerns: "fake rooftop", "bath" instead of pool. Raised by channel subscribers as concern. |
-| Nuanu (Solonin) | Second most viewed (10.5K). PARQ Ubud rescue. Plans to build only 1/3 of land. New airport impact. |
+| Developer | Key Insight from Channel | Rating Score |
+|-----------|------------------------|-------------|
+| Alex Villas | 10 years on market, Complexes 1-9, 85% occupancy, ROI 10-14%. Complex 6 delayed ~1 year, penalty ROI paid. Complex 7 prices dropped 20%. Complex 8: PBG still not received after 1.5 years. Expanding to Melasti (Complex 9). | Reliability 8.5, Profit 5.5 (Complex 7.2); Reliability 7.5, Profit 6 (Melasti/8) |
+| PARQ/Domogatsky | SCANDAL: 19.6K views (biggest video). Green zone land, no permits, 3+ years no construction. Guzeeva criminal charges (up to 10 years). "Plastic pyramid." **Rated 53/53 (worst).** | 53/53 (WORST) |
+| SWOI | Project Garden FROZEN. $2.5M collected from 20 investors, 7 months to remove soil, then 5 months of rain. Investors stuck. | Reliability 2, Profit 5 |
+| Bali Baza | Largest Russian developer on Bali. 500+ units. Sunset Village = SCANDAL. Origins Nuanu: $4,500-5,000/m2, Dusit as hotel operator. Problem: too many projects simultaneously. | - |
+| Sansara (Pandawa) | Rebranded from Ecolit. 64 villas + 91 apartments, 70% sold. 8% guaranteed yield first 2 years. 24-year leasehold extendable to 49. Pandawa beach (Bukit). | - |
+| Predmet | Architectural concrete, full leasehold warranty, own factory (prefab elements). Kaba-Kaba Village: 47-year leasehold. $250K for 2BR. 17% management fee. **Mityuhin bought a villa here.** | TOP tier |
+| Vibe Development (NAI) | FIRST escrow accounts on Bali via Mandiri bank. NAI Medical Resort: 300-340 units, Nusa Dua. 8% during construction + 10% guaranteed 2 years. Risk: medical infra complexity. | - |
+| Loyo & Bondar | 12 projects, 308+ units Pandawa Dream. Freehold land, own factory. 30yr + extension to 80yr. $88K min entry. Starbucks negotiations for retail. Black PR from competitors. Plans for SEA expansion. | - |
+| HQC | Ardhana, Bloom, Satori projects. Partnership with Accor (not yet signed). 8% guaranteed yield on Bloom. Rapid growth raises questions. | - |
+| Teos Group (Omani) | Amani Melasti + Ramada Nusa Dua. 15 years with Wyndham. Expanding to Maldives. Family business gone international. | Reliability 7, Profit 5.5 (Omani Melasti) |
+| Anta Group | Medispa project near BVLGARI Resort. Freehold at $7K/m2 (premium). Ramada Encore in Canggu. | - |
+| OXO | The Bank - freehold $830K, 8-11% ROI. Premium quality benchmark. Best management company reputation. | TOP tier |
+| BIOM | Nuanu ecosystem. Connected to Potato Head. $500K for top villas. Quality control via Jejak group. | - |
+| Nexa | Umalas townhouse dropped to $209K (was $290K) - 28% discount. | - |
+| Leaven/Liven | Stay-test 9-10/10. Best property management on Bali. Welcome drinks, aroma for robes, anti-monkey locks. "Every detail chosen consciously." | TOP tier |
+| Arhastet/White Palm | Best finish quality. German windows. | TOP tier |
+| Unit/Black Central Aziz | Great entry point for profitability. | Reliability 7, Profit 7.5 |
+| Tomora Access | Most experienced Indonesian developer. | Reliability 8, Profit 6.5 |
+| Almal ZWAN | Dubai developer entering Bali. Short leasehold. Nusa Dua location "unlucky for developers." | Reliability 5, Profit 4.5 |
+| Jost Residence | - | Reliability 4, Profit 4.5 |
+| BREIG | Edem 2 at $100K in Nusa Dua - quality concerns: "fake rooftop", "bath" instead of pool. | - |
+| Bali Capital Group | Expensive, quality questions. **Rated 50/53.** | 50/53 |
+| Kup (Kazakhstan) | Construction stopped, authority conflict. **Rated 51/53.** | 51/53 |
+| Nuanu (Solonin) | Second most viewed (10.5K). PARQ Ubud rescue + plans to rebrand. Plans to build only 1/3 of land. New airport impact. Bought PARQ Ubud. 100 hectares available near Nuanu (Golden Mile). | - |
 
 ### Mityuhin's Reliable Projects List (from live Q&A, rTSUVF4FE7E)
 Projects explicitly named as reliable by Mityuhin:
@@ -94,24 +100,31 @@ Key advice from Mityuhin: "Не вкладывайте больше чем го�
 - Hotel operators (Wyndham, OXO) provide stability but lower margins
 - Key question: who controls pricing and which platforms are used?
 
-### 6. Contract Red Flags
+### 6. Contract Red Flags (sezbXgmFFbY)
 From "Разбор договоров" episode - critical contract points:
 - **PBG, AMDAL, SLF** documentation must exist
-- Payments should be tied to construction milestones (not time)
+- **Payments MUST be tied to construction stages** (not time-based)
+- **Penalty for delays MUST be in contract**
 - Refund clauses for delivery delays (check penalty %)
 - Confiscation clauses (developer keeping deposits) - be wary
 - Master plan change prohibition - should be in contract
 - Resale rights during construction - must be explicitly allowed
 - Post-delivery warranty terms
+- **RED FLAG: if developer instantly accepts all your contract changes** - means they don't plan to follow through
+- Standard developer contracts "protect developer maximally, investor minimally"
+- **~30 amendments typical** for a proper Bali contract negotiation
+- **Pool system insight:** if return calculated by area - buy cheaper unit (no view), same % return
 
 ### 7. Location Trends (2025-2026)
-- **Canggu:** saturating, competition intense, prices plateauing
-- **Kaba-Kaba:** "new Canggu?" - potential but unproven
+- **Canggu:** 90% coastal line built, 7,100 1BR units in construction, ADR falling 2nd year. Saturated.
+- **Kuta:** 100% coastal line built
+- **Seminyak:** 100% coastal line built
+- **Kaba-Kaba:** "new Canggu?" - potential but unproven. Predmet building here.
 - **Kedungu:** debated - hype vs real potential
 - **Uluwatu/Bukit:** growing, premium positioning
-- **Nusa Dua:** stable, institutional (Wyndham), lower risk
+- **Nusa Dua:** stable, institutional (Wyndham, NAI Medical Resort with escrow), lower risk
 - **Ubud:** occupancy concerns, seasonal
-- **Nuanu:** innovative but slow sales in some projects (Origins)
+- **Nuanu:** 3,000-5,000 visitors/day, 40 facilities, innovative but slow sales in some projects (Origins). 100 hectares Golden Mile nearby.
 
 ### 8. Legal Deep Dive: Ownership Forms
 From legal consultant Vasily Pronin episode (slrOfnl5MPA) + Solonin interview:
@@ -134,9 +147,17 @@ From legal consultant Vasily Pronin episode (slrOfnl5MPA) + Solonin interview:
 - PMA company setup: **$2,000 initial + $1,700-3,000/year** maintenance
 
 ### 9. Nuanu Creative City - Deep Insights
-From Solonin interview (10.5K views) + BIOM episode + Nuanu tour:
+From Solonin interview (yRkpUmATiLc, 10.5K views) + BIOM episode + Nuanu tour (v-YXOdDOOw4):
 - **Only 1/3 of 44 ha will be built** - deliberate low-density strategy
-- **PARQ Ubud rescue:** Solonin involved in restarting failed PARQ project
+- **3,000-5,000 visitors/day** currently
+- **40 functioning facilities**
+- **82% waste recycled**
+- **$1,200-1,500/month school** (ProEd)
+- **Camera + AI security system** - first on Bali
+- **96% workers Indonesian**
+- **PARQ Ubud rescue:** Solonin bought PARQ Ubud, plans to rebrand
+- **100 hectares available near Nuanu** (Golden Mile potential)
+- **Pedestrian bridge planned** between Nyanyi and Cemagi
 - **New airport on North Bali** - will shift development patterns
 - **Trump-adjacent land** - competition for premium positioning
 - **Infrastructure:** Luna Beach Club, Oshome Hotel ($380/night), ProEd school, 20+ restaurants
@@ -146,27 +167,46 @@ From Solonin interview (10.5K views) + BIOM episode + Nuanu tour:
 
 ### 10. Developer Scandals & Failures
 Critical risk intelligence:
-- **Domogatsky/Guzeeva lawsuit** (19.6K views): Investors suing, criminal charges (up to 10 years for Guzeeva). Damaged Bali's investment reputation in Russian-speaking market.
-- **SWOI frozen project** (3.2K views): Construction halted, investors can't get refunds. Attempting restart.
-- **PARQ Ubud** conflict with local community, AMDAL violations, authorities involved
-- **Alex Villas Complex 7** prices dropped 20% post-launch
+- **Domogatsky/Guzeeva lawsuit** (19.6K views): Green zone land, no permits, 3+ years no construction. Criminal charges (up to 10 years for Guzeeva). Rated 53/53 (worst). Damaged Bali's investment reputation in Russian-speaking market.
+- **SWOI frozen project** (3.2K views): Garden project - $2.5M collected from 20 investors, 7 months to remove soil, then 5 months of rain. Investors stuck.
+- **PARQ Ubud** conflict with local community, AMDAL violations, authorities involved. Solonin bought to rescue/rebrand.
+- **Alex Villas Complex 7** prices dropped 20% post-launch. **Complex 8: PBG still not received after 1.5 years.**
+- **Kup (Kazakhstan)** - construction stopped, authority conflict (rated 51/53)
+- **Bali Capital Group** - rated 50/53, expensive with quality questions
 - Pattern: developers promise too much, deliver late, underestimate Bali bureaucracy
 
 ### 11. Infrastructure & Future Outlook
 - **New airport on North Bali** - game changer for northern development
-- **Bridge between Cemagi and Nyanyi** (Nuanu) - planned
+- **Pedestrian bridge between Cemagi and Nyanyi** (Nuanu) - planned
 - **Nusa Penida** emerging (OceaniQ expanding there)
 - **Maldives** - some Bali developers expanding (Teus Group)
+- **Market will consolidate to ~10 serious developers** (QgUrfKkKh_k)
+- **Off-plan sales may be banned** without full permits
 - **5-10 year forecast:** Market matures, quality rises, amateur developers exit
 - **Indonesia economic boom potential** - banking/IT sector growth
 
-### 12. Market Risks for 2026
+### 12. Market Stats 2025-2026 (OhgoczG2144)
+- **7,100 1BR units being built** by local developers in Canggu alone
+- **+568 hotel units** (Marriott, Kempinski) coming by 2027
+- **ADR in Canggu falling** for 2nd consecutive year
+- **Realistic first-year yield: 11-12%**, established projects: up to 14%
+- **15%+ practically impossible now**
+- **World Bubble Index:** <8% rental yield = overheated market
+- **All Bali units = 2-3 Dubai towers** in total volume
+- **Coastal line saturation:** Kuta 100%, Seminyak 100%, Canggu 90% built
+- **Tax burden on developers: 21%** (transfer + VAT 11%)
+- **Construction cost benchmark (experienced developers): $3,000/m2** all-in
+- **Max building height Bali: 15 meters**
+- **Tourism zone = only 0.6% of island**
+
+### 13. Market Risks for 2026
 - Pyramid scheme risk - some projects may be unsustainable
 - Major developer failures possible (unnamed but hinted)
 - Iran/Middle East conflict: tourism disrupted for Middle Eastern tourists, Russians unaffected (QOKqoXKaCeQ)
 - **Oversupply:** listings +27%, rental yields -18% YoY
 - "Too good to be true" pricing = due diligence required
 - Some developers building without full permits (PBG)
+- **Off-plan sales may be banned** without full permits (QgUrfKkKh_k)
 - OceaniQ: premium positioning justified, but ROI claims of 15-20% questioned by subscribers
 - Black Sand Oasis: new project, insufficient track record
 
@@ -182,18 +222,24 @@ Critical risk intelligence:
 
 | Scenario | Real ROI | Notes |
 |----------|----------|-------|
-| Developer marketing claims | 15-20% | Consistently overstated |
+| Developer marketing claims | 15-20% | Consistently overstated, **15%+ practically impossible now** |
+| Realistic first-year yield | **11-12%** | New projects, from OhgoczG2144 |
+| Established projects | **up to 14%** | With track record |
 | Ready villas with management company | **8-10%** | After 20-25% management commission |
 | Freehold + self-management | **10-12%** | Requires presence on Bali |
 | Self-development (buy land + build) | **14-16%** | Only for experienced investors |
-| Construction cost benchmark | $1,500/m2 | For quality build |
+| Construction cost (basic) | $1,500/m2 | For quality build |
+| Construction cost (experienced devs) | **$3,000/m2** | All-in including permits, infra (QgUrfKkKh_k) |
+| World Bubble Index threshold | **<8%** | Below = overheated market |
 
 **Key dynamics:**
 - Rental yields dropped 18% YoY while listings grew 27%
 - Self-management yields 30-50% more than management company
 - Management companies take 20-25% (some up to 30%)
 - Tourist arrivals +9% but per-tourist spending declining
-- Market maturing: amateur developers exiting
+- ADR in Canggu falling for 2nd consecutive year
+- 7,100 1BR units being built in Canggu + 568 hotel units by 2027
+- Market maturing: amateur developers exiting, consolidation to ~10 serious developers
 
 ### Blackpoint Ecosystem (from aAHHDexswWg, qF2cmJcwph0)
 
@@ -213,12 +259,26 @@ Critical risk intelligence:
 
 ## Developer Ratings (TWO comprehensive videos)
 
-### Rating v2 (Aug 2025) - 53 developers
+### Rating v2 (Aug 2025) - 53 developers ranked
 Video: "Худшие и лучшие застройщики Бали" (F3zo79M7tRo, 3,629 views)
 
 53 companies rated. Full list: OXO, Tamora, NPG (Ecoverse), Lyvin, Archestet, Predmet, 618, Biom, Anta Group, Oceaniq, HQC, PCE, Unit Space, MIRAH, MBM, Feeels, Teus Group, ADVA, Loyo & Bondar, PGD, Breig, NEXA, Big Waves, Stetsyuk, Bali Family, Avalon, IJI Group, Ecolit (Sansara), Taryan Group, Sunny Development, Baza, Alex Villas, Theia, Bali Bliss, Indonesian Construction Group, DM Project, Vibe, Balix, Almal, Performa, Revolt Group, ADDRESS, Bali Investments, SWOI, COCO, PARQ, Basic, Magnum, Dolphin, Bali Capital Group, CUBE, TUTUM TERRA, Domogatsky
 
-### Rating v1 (Nov 2025) - 50+ developers
+**TOP developers (from F3zo79M7tRo):**
+- **Leaven/Liven** - stay-test 9-10/10, best property management
+- **Predmet** - architectural concrete, full leasehold warranty, own factory. Mityuhin bought a villa here
+- **Arhastet/White Palm** - best finish quality, German windows
+- **OXO** - premium benchmark ($830K freehold, 8-11% ROI)
+- **Tomora Access** - most experienced Indonesian developer
+
+**BOTTOM developers (from F3zo79M7tRo):**
+- **53/53: Domogatsky** - "plastic pyramid", green zone land, no permits
+- **52: unnamed** - building on green zone
+- **51: Kup (Kazakhstan)** - construction stopped, authority conflict
+- **50: Bali Capital Group** - expensive, quality questions
+- **SWOI Gardens** - reliability 2/10, frozen project, investors stuck
+
+### Rating v1 (Nov 2025) - 50+ developers scored
 Video: "Вся недвижимость на Бали в одном видео" (PiOUcG911rI, 2,781 views)
 
 3 evaluation criteria:
@@ -226,11 +286,24 @@ Video: "Вся недвижимость на Бали в одном видео" 
 2. **Reliability** (надёжность) - track record, documents, delivery
 3. **Property class** (класс жилья) - build quality, design, amenities
 
-**Note:** Specific scores require watching videos. These are the most comprehensive public comparisons of Bali developers available. Rating table shared in [closed investor Telegram group](https://t.me/+sFtHYc6P-1IwM2Ey).
+**Specific scores from PiOUcG911rI (reliability / profitability out of 10):**
 
-## Stay-Test Results (Nov 2025)
+| Project | Reliability | Profitability |
+|---------|------------|--------------|
+| Tomora Access | 8 | 6.5 |
+| Alex Villas 7.2 | 8.5 | 5.5 |
+| Alex Villas Melasti (8) | 7.5 | 6 |
+| Omani Melasti (Teos) | 7 | 5.5 |
+| Unit Black Central Aziz | 7 | 7.5 |
+| Almal ZWAN | 5 | 4.5 |
+| Jost Residence | 4 | 4.5 |
+| SWOI Gardens | 2 | 5 |
 
-8 properties tested by actually staying:
+Full rating table shared in [closed investor Telegram group](https://t.me/+sFtHYc6P-1IwM2Ey).
+
+## Stay-Test Results (Nov 2025, XHr5wnIiyrw)
+
+8 properties tested by actually staying overnight:
 
 | Property | Developer | Key Takeaway |
 |----------|-----------|-------------|
@@ -241,9 +314,13 @@ Video: "Вся недвижимость на Бали в одном видео" 
 | Onyx Park Resort | - | Tested |
 | Nexa Umalas | Nexa | Tested |
 | The Bank | OXO | Tested |
-| Lyvin Melasti | Lyvin | Tested |
+| Leaven/Liven Melasti | Leaven/Liven | **9-10/10** - exceptional management, welcome drinks, aroma for robes, anti-monkey locks, "every detail chosen consciously" |
 
-Details: "Who disappointed and who met expectations" - real quality vs marketing promises.
+**Key stay-test insights:**
+- **"Good property + terrible management company = bad investment"** - management matters more than build quality
+- Most projects have **poor soundproofing** between units
+- **Sliding doors quality varies hugely** across projects - a key differentiator
+- Leaven/Liven set the benchmark: management details (aromas, locks, welcome experience) separate great from average
 
 ## Video Index (30 videos, sorted by date)
 

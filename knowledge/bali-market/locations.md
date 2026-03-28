@@ -11,12 +11,12 @@ Bali real estate concentrates in several distinct zones, each with its own chara
 - **Target buyers:** Young investors, digital nomads, short-term rental
 - **Price level:** Mid-to-high ($250K-$400K for 3BR villas)
 - **Leasehold land:** 11M IDR/are/year (Buduk area)
-- **Risk:** Oversaturation of short-term rentals, traffic congestion. Market saturating - rental yields dropping, competition intense (transcript-sourced)
-- **Projects here:** Alex Villas Complex (Berawa) - Complex 7 dropped 20% in price, Freehold villas (Berawa)
+- **Risk:** Oversaturation of short-term rentals, traffic congestion. Market saturating - rental yields dropping, competition intense (transcript-sourced). 90% of coastal line built. 7,100 new 1BR units in pipeline, ADR falling
+- **Projects here:** Alex Villas Complex (Berawa) - Complex 7 dropped 20% in price, Freehold villas (Berawa), Anta Group (started $120K now $165K)
 - **Key distances:** Beach 5-10 min, airport 40 min
 
-### Pererenan
-- **Profile:** Quieter alternative to central Canggu, growing fast
+### Pererenan / Seseh / Cemagi
+- **Profile:** Quieter alternative to central Canggu, growing fast. Trend shifting from Pererenan to Seseh/Cemagi - next 2-3 years
 - **Target buyers:** Lifestyle buyers, mid-budget investors
 - **Price level:** $179K-$248K for 1-2BR properties
 - **Projects here:** Prive Pererenan (from $248K), loft villas ($179-204K)
@@ -58,11 +58,17 @@ Bali real estate concentrates in several distinct zones, each with its own chara
 
 ## Uluwatu / Bukit Peninsula
 
+### Melasti (Bukit)
+- **Profile:** Hot new development area, multiple projects launching, lots of competition
+- **Status:** Nobody has finished construction yet - all projects in progress
+- **Projects here:** Teus/Wyndham (90 rooms, $4,000/m2), Alex Villas Complex 8 (leasehold 42yr), HQC Bloom
+- **Risk:** High competition, unproven delivery track record in the area
+
 ### Uluwatu
-- **Profile:** Cliffside, premium views, surf spots, developing rapidly
-- **Target buyers:** Premium investors, surf community
+- **Profile:** Cliffside, premium views, surf spots, developing rapidly. Best performance area - 85% occupancy, high rental rates, rising trend
+- **Target buyers:** Premium investors, surf community, Europeans/Australians
 - **Price level:** $138K-$649K (Amani Melasti apts to Surfside villas)
-- **Projects here:** Amani Melasti (Wyndham), Surfside (Fund Bridge), Desa Harmonis, Pandawa Residence (Sansara) - 64 villas + 91 apartments in Pandawa beach area
+- **Projects here:** Amani Melasti (Wyndham), Surfside (Fund Bridge), Desa Harmonis, Pandawa Residence (Sansara) - 64 villas + 91 apartments in Pandawa beach area, Loyo & Bondar Pandawa Dream
 - **Key distances:** Suluban beach 250m (Surfside), Melasti beach (Amani)
 
 ### Balangan (Bukit)
@@ -75,7 +81,8 @@ Bali real estate concentrates in several distinct zones, each with its own chara
 - **Profile:** Premium resort zone, family-friendly, established tourism infrastructure. Considered lower-risk, institutional area (transcript-sourced)
 - **Target buyers:** Conservative investors wanting brand-name management
 - **Price level:** $112K-$225K (Ramada), OceaniQ pricing by request
-- **Projects here:** Ramada Nusa Dua (Wyndham), OceaniQ Villas (award-winning) - ROI claims of 15-20% questioned in transcripts, Oceaniq Phase 2, BREIG Edem 2 (from $100K but quality concerns noted)
+- **Projects here:** Ramada Nusa Dua (Wyndham), OceaniQ Villas (award-winning) - ROI claims of 15-20% questioned in transcripts, Oceaniq Phase 2, BREIG Edem 2 (from $100K but quality concerns noted), Satori (HQC) almost sold out, NAI Medical 300+ units, Teus Ramada
+- **Competition:** Multiple competing projects. Competing with 5-star hotels at $150-300/night
 - **Key distances:** Beach 80m (OceaniQ), airport 20 min
 
 ## Ubud
@@ -83,7 +90,8 @@ Bali real estate concentrates in several distinct zones, each with its own chara
 - **Target buyers:** Wellness/retreat investors, experience seekers
 - **Price level:** $220K-$435K for villas, land 7-8M IDR/are/year
 - **Land availability:** Larger plots (1100-2700 m2) available
-- **Risk:** Lower rental yields vs coastal areas, seasonal tourism
+- **Risk:** Lower rental yields vs coastal areas, seasonal tourism. Only experience villas work (not apartments)
+- **Key insight:** View villas rent 30% higher than non-view
 - **Projects here:** Maison Bedugul (nearby, from $242K), Setter Coworking
 
 ## Nuanu Creative City
@@ -91,7 +99,9 @@ Bali real estate concentrates in several distinct zones, each with its own chara
 - **Target buyers:** Innovation-minded investors, community-seekers
 - **Price level:** $147K-$740K (BIOM), from $186K (Ecoverse)
 - **Developers present:** BIOM, Ecoverse, OXO (management), Bali Baza - Origins at $4,500-5,000/m2 with Dusit operator (slow sales noted in transcripts)
-- **Infrastructure:** Beach club, media park, cinema, school (Cambridge), hotel, 20+ restaurants
+- **Infrastructure:** Beach club, media park, cinema, school (Cambridge, $1,200-1,500/month), hotel, 20+ restaurants, 40 facilities
+- **Stats:** 3,000-5,000 visitors/day, 82% waste recycled
+- **Expansion:** 100 hectares near available (Golden Mile)
 - **Unique:** Integrated community model, not standalone villas
 - **Key distances:** Beach 7 min
 

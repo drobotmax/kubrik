@@ -93,6 +93,27 @@ Data sourced from YouTube reviews and independent analyses (not developer market
 
 **Key takeaway:** Developer claims of 15-20% ROI are typically inflated. Real passive returns with management company are 8-10%. The gap between claimed and real ROI is 5-10 percentage points.
 
+### Additional project pricing (transcript-verified, March 2026)
+| Project | Price/Details | Source |
+|---------|--------------|--------|
+| Alex Villas Complex 7 | From $109K (was $135K), Berawa | Transcript |
+| Alex Villas Complex 8 | Leasehold 42yr, Melasti | Transcript |
+| Loyo & Bondar Pandawa Dream | Smart villa $88K (30m2), penthouse $118K, 3BR $350K. Leasehold 30yr extendable to 80yr for ~$6K | Transcript |
+| Anta Group Canggu | Started $120K, now $165K | Transcript |
+| Anta Medispa | $5,000/m2 | Transcript |
+| Teus Group | $4,000/m2, 90 rooms Melasti | Transcript |
+| Breig Edem 2 | $90K (24m2), $97.5K (33m2 + pool), $120-127.5K (with kitchen) | Transcript |
+| NAI Medical | 8% during construction + 10% guaranteed 2 years | Transcript |
+| OXO The Bank | $830K freehold, 4BR, 350m2, 8-11% ROI | Transcript |
+
+### Market reality check (March 2026)
+- **Canggu pipeline:** 7,100 new 1BR units, ADR falling 2nd year in a row
+- **Realistic first-year yield:** 11-12%
+- **Established property yield:** 14%
+- **15%+ yield:** practically impossible
+- **Construction cost (experienced devs):** $3,000/m2 all-in (vs $1,500/m2 for basic)
+- **Loyo & Bondar construction cost:** $1,600/m2
+
 ---
 
 ## ROI Benchmarks (Developer Projections)

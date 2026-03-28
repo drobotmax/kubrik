@@ -70,9 +70,10 @@
 > (Source: Mityuhin/Pronin interview)
 
 ### Land Zoning Categories
-- **Pink (Pariwisata):** Tourism zone - for villas, hotels, resorts. Most common for investment properties
+- **Pink (Pariwisata):** Tourism zone - for villas, hotels, resorts. Most common for investment properties. Tourism zone = 0.6% of island area
 - **Yellow:** Residential/mixed use - for housing, some commercial
-- **Green:** Agricultural - cannot build without rezoning
+- **Green:** Agricultural - cannot build without rezoning. **Green zones cannot be re-zoned anymore**
+- **Max building height:** 15 meters
 - **Important:** Always verify zoning before purchase
 
 ## Airbnb & Short-term Rental Regulation (2025-2026)
@@ -116,6 +117,10 @@
 - Some developers start construction WITHOUT obtaining PBG first
 - This is a major risk - property may face legal issues, demolition orders, or inability to get SLF
 - **Always verify PBG exists before investing** - request the document and verify its authenticity
+- Construction start without PBG: still happening but increasingly risky
+- **PBG queue:** from 10 to 300 projects waiting - massive backlog
+- **SLF path** (self-certify after construction) no longer works after PARQ case
+- **Off-plan sales ban planned** - selling without all permits may be prohibited
 - (Source: tZkRtiuqETI transcript)
 
 ## Tax & Financial Considerations
@@ -127,6 +132,7 @@
 - **Seller tax (PPh):** 2.5% of transaction value
 - **Buyer tax (BPHTB):** 5% of transaction value
 - **Total transaction cost:** 7.5% split between buyer and seller
+- **Total developer tax burden:** 21% (transfer tax + VAT 11%) - many developers previously didn't pay
 
 ### Rental Income Tax
 - **Indonesian tax residents:** 10% of rental income
@@ -140,6 +146,11 @@
 | PMA initial setup | ~$2,000 |
 | PMA annual maintenance | $1,700-3,000/year |
 | Includes | Reporting, compliance, accounting |
+
+## Escrow & Payment Innovation
+
+- **Escrow accounts:** First on Bali through Mandiri bank (NAI project)
+- **Crypto accepted:** Through Indodax (state exchange), crypto -> IDR -> bank account
 
 ## Due Diligence Checklist
 

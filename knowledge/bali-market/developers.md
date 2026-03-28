@@ -69,17 +69,21 @@ Profiles of developers active in the Bali market as of Q1 2026, sourced from "Б
 
 ---
 
-## Wyndham Projects (Amani Melasti & Ramada Nusa Dua)
+## Teus Group (Wyndham Projects)
+
+**Type:** International developer (Ukraine-founded)
+**Founded:** 1943 (Kharkiv), 100,000 m2/year in Ukraine
+**Commission:** 20%
 
 ### Amani Melasti
 **Type:** Investment hotel, premium
 **Operator:** Wyndham Hotels & Resorts
-**Location:** Melasti Beach, Uluwatu
+**Location:** Melasti Beach, Uluwatu, 250m from beach
 **Units:** 90 apartments across 5 floors
-**Price range:** $138,000-$264,000 (30-65m2)
-**Leasehold:** 30+30 years
+**Price range:** ~$4,000/m2, $138,000-$264,000 (30-65m2)
+**Leasehold:** 30+30 years (30.5+30 per Teus info)
 **Delivery:** Q2 2027
-**Status:** ~80%+ sold
+**Status:** 65/90 sold (72%) in 3 months
 **Infrastructure:** Rooftop infinity pool + bar, restaurant, SPA, coworking, concierge 24/7
 **Materials:**
 - [Video](https://drive.google.com/drive/u/0/folders/1qF6_kgiwEKibxcLXiLt8kxhga0motz6M)
@@ -90,10 +94,10 @@ Profiles of developers active in the Bali market as of Q1 2026, sourced from "Б
 
 ### Ramada Nusa Dua
 **Type:** Investment art hotel
-**Operator:** Wyndham Hotels & Resorts
+**Operator:** Wyndham Hotels & Resorts (Ramada brand)
 **Location:** Nusa Dua
-**Products:** Rooms (33-42m2) from $112,900 + Villas (72-99m2) from $169,900
-**Leasehold:** 30+30 years
+**Products:** Villas + 99 hotel rooms; Rooms (33-42m2) from $112,900 + Villas (72-99m2) from $169,900
+**Leasehold:** 30+30 years (30.5+30)
 **Payment:** 30% initial, quarterly installments (9 quarters)
 **Delivery:** Q2 2028
 **Materials:**
@@ -101,6 +105,10 @@ Profiles of developers active in the Bali market as of Q1 2026, sourced from "Б
 - [Presentation](https://drive.google.com/drive/folders/1BZ0_JTdBPDk88IS0DTOu7u2YQEPzeFrx)
 - [Availability](https://docs.google.com/spreadsheets/d/1rWSTrsncngp3E7HbZC2c_grGI7CnYmT4OE_QSPElxuE/edit)
 - [3D Model](https://flatshow.property/ru/nusa_dua#/)
+
+### Other Teus Projects
+- **Turkey:** Best Western, 127 units
+- **Maldives (planned):** ~140 rooms, 180K EUR minimum entry
 
 ---
 
@@ -229,15 +237,137 @@ Profiles of developers active in the Bali market as of Q1 2026, sourced from "Б
 
 ---
 
+## Alex Villas
+
+**Type:** Volume developer, vertically integrated
+**Experience:** 10 years on Bali, 9 complexes
+**Infrastructure:** Own concrete factory + furniture factory
+**Occupancy:** ~85%
+**ROI claim:** 10-14%, up to 20% in some cases
+**First payment:** 50% (sometimes 35%)
+**Expansion:** Considering Phuket
+
+**Projects:**
+- **Complexes 1-5:** Delivered
+- **Complex 6:** Delayed ~1 year, soft-opening November 2025
+- **Complex 7 (Laguna):** ~300 units, villas >50% sold, prices dropped 20% ($135K -> $109K)
+- **Complex 8 (Melasti):** Leasehold 42 years, PBG not received after 1.5 years
+- **Complex 9 (Vulkan):** Near Karma Kandara, leasehold 35 years
+
+**Red flags:** Complex 6 delay, Complex 8 PBG issues, price drops on Complex 7
+
+---
+
+## Loyo & Bondar
+
+**Type:** Volume developer, vertically integrated
+**Scale:** 12 projects total, 4 delivered on time
+**Infrastructure:** Own construction company + 2 factories
+**Construction cost:** $1,600/m2 all-in
+**Plans:** 400-500 units/year by 2029
+**Operator:** Marriott Bonvoy certification (150-page agreement)
+
+**Key project - Pandawa Dream:**
+- 308 units total (1st phase 240-250, 2nd phase ~130)
+- Freehold land
+- Smart villa from $88K (30m2), penthouse from $118K, 3BR villas from $350K
+- Leasehold: 30yr + free extension to 80yr (30+20+30), extension cost ~$6K
+- 10% guaranteed yield for 2 years (when buying 2 units)
+
+**Co-development opportunity:** $3-6M per project, investors get ~40% return in ~2 years
+
+---
+
+## HQC (High Quality Construction)
+
+**Type:** Mid-tier developer
+**Founded:** 2+ years ago
+**Founder:** Dmitry (19 years construction experience in Russia)
+**Policy:** Returns 100% to dissatisfied investors
+
+**Projects:**
+- **Artkhana (Bukit):** 8% guaranteed for 3 years; delays (was end 2025, now mid 2026)
+- **Satori (Nusa Dua):** PBG received, villas sold out in 1 month
+- **Bloom (Bukit/Melasti):** Adults-only concept, Accor Handwritten brand (NOT signed yet - franchise model, would be first in Indonesia), 30+ year leasehold
+
+**Note:** Accor negotiations ongoing - franchise model, not management contract
+
+---
+
+## Anta Group
+
+**Type:** Volume developer, diversified
+**Scale:** 50,000 m2 built/under construction, 400 units sold
+**Operator negotiations:** Hyatt (Park Hyatt) - not finalized
+
+**Projects:**
+- **New Era (Canggu):** 3 towers, started $120K now $165K, ~10 units left
+- **Romada Encore (Pandawa):** Villas from $265-295K -> $330K
+- **Medispa:** Freehold, $5,000/m2, 3BR+ villas, medical wellness concept, near Bulgari hotel
+- **Liga Tennis:** Sports center - 4 tennis, 4 padel, 4 pickleball courts, 5,000 m2 gym
+
+---
+
+## White Development (NAI)
+
+**Type:** Developer with medical wellness focus
+**Founded:** 2023
+**First project:** Cassandra 1 (Sanur)
+**Key innovation:** FIRST escrow accounts on Bali (via Mandiri bank)
+**Crypto:** Accepts via Indodax
+**Contractors:** Own team + PP (state company from Jakarta)
+
+**Key project - NAI Medical Resort:**
+- Location: Nusa Dua
+- Scale: 300-340 units, ~3 hectares
+- Yield: 8% during construction + 10% guaranteed for 2 years
+- Medical wellness: biohacking, anti-aging, detox ($5K-10K programs)
+
+---
+
+## Arhastet / White Palm
+
+**Type:** Premium boutique developer
+**Location:** Canggu
+**Projects:** White Palm, Merkestead Villas
+**Key feature:** Rated as best villas on market by finish quality
+**Specifications:** German windows, water purification system
+**Comparison:** Higher quality than OXO and Leaven by finish standards
+
+---
+
+## Leaven / Liven
+
+**Type:** Premium segment developer
+**Location:** Uluwatu
+**Stay-test rating:** 9-10/10
+**Management quality:** Exceptional - welcome drinks, aroma robes, anti-monkey locks
+**Key feature:** "Every detail chosen consciously"
+
+---
+
+## Tomora Access
+
+**Type:** Most experienced Indonesian developer on Bali
+**Location:** Uluwatu
+**Reliability:** 8/10 (Mityuhin rating)
+**Profitability:** 6.5/10 (Mityuhin rating)
+**Weakness:** Marketing
+
+---
+
 ## Mityuhin's Reliable Developers List
 
-Source: rTSUVF4FE7E (Mityuhin's review)
+Source: rTSUVF4FE7E (Mityuhin's review), updated from 23 video transcripts
 
 Developers Mityuhin considers reliable for investment:
 - **OXO** - property management + development
 - **Teos Group** (Wyndham operator projects)
 - **BIOM** - Nuanu lifestyle developer
 - **Predmet** - small focused developer, own factory
+- **Leaven/Liven** - premium segment, Uluwatu
+- **Arhastet** - best finish quality on market
+- **Tomora Access** - most experienced Indonesian developer
 
 ---
 

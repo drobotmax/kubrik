@@ -16,6 +16,7 @@ Knowledge base for AI Marketing Factory agents. Contains structured market data 
 | [regulations.md](regulations.md) | Leasehold vs freehold, Airbnb regulation, foreign ownership rules |
 | [developers.md](developers.md) | Developer profiles, projects, pricing, materials |
 | [blackpoint-listings.md](blackpoint-listings.md) | Blackpoint Marketplace - current inventory and listings |
+| [market-insights-mityuhin.md](market-insights-mityuhin.md) | Expert analysis: 15 videos, developer reviews, risk patterns, investor concerns |
 | [sources.md](sources.md) | All original links organized by developer/topic |
 
 ## Quick Reference
@@ -27,3 +28,5 @@ Knowledge base for AI Marketing Factory agents. Contains structured market data 
 - **Projected ROI:** 9.5-20% annually (developer claims)
 - **Key locations:** Canggu, Uluwatu/Bukit, Nusa Dua, Ubud, Nuanu
 - **Hot trend Q1 2026:** Airbnb licensing crackdown (deadline March 31, 2026)
+- **Expert source:** 15 video reviews by Mityuhin/Blackpoint - 50+ developers rated
+- **Key risk signal:** Investor trust declining, some developers missing deadlines

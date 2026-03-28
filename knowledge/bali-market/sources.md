@@ -106,6 +106,28 @@ All original links organized by developer/topic. Collected from Telegram "Баз
 | [Alexandr Mityuhin - market 2026](https://www.youtube.com/watch?v=QOKqoXKaCeQ) | Iran conflict, Airbnb ban, market changes 2026 |
 | [Alexandr Mityuhin channel](https://www.youtube.com/@alexandrmityuhin/videos) | Ongoing Bali market analysis |
 
+## YouTube - Alexandr Mityuhin Channel (@alexandrmityuhin)
+
+Full analysis in [market-insights-mityuhin.md](market-insights-mityuhin.md). 15 videos:
+
+| Date | Title | Link |
+|------|-------|------|
+| 2026-03-27 | Война в Иране, Запрет Airbnb, Рынок 2026 | [watch](https://www.youtube.com/watch?v=QOKqoXKaCeQ) |
+| 2026-02-27 | Крупнейший РФ застройщик - Bali Baza | [watch](https://www.youtube.com/watch?v=XevUbLAY8WM) |
+| 2026-02-21 | Pandawa Residence - Sansara | [watch](https://www.youtube.com/watch?v=MbJfrvt5FoM) |
+| 2026-02-16 | Главные вопросы - прямой эфир | [watch](https://www.youtube.com/watch?v=rTSUVF4FE7E) |
+| 2026-02-10 | Эскроу-счета - NAI Medical Resort | [watch](https://www.youtube.com/watch?v=tRLCq7VmBF4) |
+| 2026-02-02 | Predmet Kaba Village | [watch](https://www.youtube.com/watch?v=TeisBc6Yo6k) |
+| 2026-01-31 | Застройщик Predmet | [watch](https://www.youtube.com/watch?v=a0b_luyDI2E) |
+| 2026-01-24 | Blackpoint Marketplace анонс | [watch](https://www.youtube.com/watch?v=aAHHDexswWg) |
+| 2026-01-12 | Неудобные вопросы о Бали | [watch](https://www.youtube.com/watch?v=tZkRtiuqETI) |
+| 2025-12-19 | Разбор договоров | [watch](https://www.youtube.com/watch?v=sezbXgmFFbY) |
+| 2025-12-10 | Что волнует инвестора 2025 | [watch](https://www.youtube.com/watch?v=OhgoczG2144) |
+| 2025-12-04 | Инвест-тур на Бали | [watch](https://www.youtube.com/watch?v=qF2cmJcwph0) |
+| 2025-11-26 | Рейтинг проектов 1-10 (50+ девелоперов) | [watch](https://www.youtube.com/watch?v=PiOUcG911rI) |
+| 2025-11-08 | Заселились к топ застройщикам (8 объектов) | [watch](https://www.youtube.com/watch?v=XHr5wnIiyrw) |
+| 2025-10-31 | Alex Villas - Алекс Штефан | [watch](https://www.youtube.com/watch?v=pkvjn4KXhX8) |
+
 ## Notes on Inaccessible Sources
 
 These sources require browser/login access and could not be fully extracted:

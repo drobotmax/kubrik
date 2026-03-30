@@ -1,4 +1,4 @@
-# AI Marketing Factory - Knowledge Base & Pipeline
+# KUBRIK - Knowledge Base & Pipeline
 
 ## Команда
 - **Максим Дробот** - AI-архитектура, разработка, knowledge base
@@ -9,7 +9,7 @@
 Общая база знаний и рабочие материалы команды. Здесь живут:
 - Knowledge base для AI-агентов (книги, курсы, справочники платформ)
 - Клиентские папки с брифами, стратегиями, креативами
-- Pipeline агентов (стратег -> медиабайер -> копирайтер -> валидатор)
+- KUBRIK Pipeline агентов (стратег -> медиабайер -> копирайтер -> валидатор)
 
 ## Навигация
 
@@ -23,8 +23,15 @@ knowledge/                  - база знаний (главный актив)
   meta-ads/                 - справка Meta Ads Help Center (1200+ страниц)
   seo-course/               - SEO курс
 
-agents/                     - определения AI-агентов
-  strategist/               - агент-стратег
+agents/                     - определения AI-агентов (pipeline)
+  strategist/skill.md       - агент-стратег (анализ рынка, ЦА, позиционирование)
+  media-buyer/skill.md      - агент-медиабайер (кампании, аудитории, бюджеты)
+  copywriter/skill.md       - агент-копирайтер (тексты под каждый плейсмент)
+  validator/skill.md        - агент-валидатор (QA: лимиты, policy, бриф)
+  references/platform-specs.md - техтребования Meta/Google/Yandex
+
+clients/                    - результаты работы по клиентам
+  [client-slug]/            - brief.md, strategy.md, media-plan.md, creatives.md, validation.md
 
 strategy/                   - стратегии и аналитика
   positioning-analysis.md   - утвержденное позиционирование (2026-03-26)

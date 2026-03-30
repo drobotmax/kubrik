@@ -28,7 +28,9 @@ agents/                     - определения AI-агентов (pipeline
   media-buyer/skill.md      - агент-медиабайер (кампании, аудитории, бюджеты)
   copywriter/skill.md       - агент-копирайтер (тексты под каждый плейсмент)
   validator/skill.md        - агент-валидатор (QA: лимиты, policy, бриф)
+  sales-qa/skill.md         - агент sales QA (разбор звонков, ICP fit, objections, next step)
   references/platform-specs.md - техтребования Meta/Google/Yandex
+  references/sales-qa-checklist.md - чеклист quality review для отдела продаж
 
 clients/                    - результаты работы по клиентам
   [client-slug]/            - brief.md, strategy.md, media-plan.md, creatives.md, validation.md
@@ -84,6 +86,7 @@ clients/[client-slug]/
   media-plan.md     - медиаплан
   creatives.md      - креативы
   validation.md     - результат валидации
+  sales-qa.md       - разбор sales-call / переписки / оффера
 ```
 
 ## GitHub Project

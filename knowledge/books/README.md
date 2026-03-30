@@ -162,3 +162,16 @@
 **После Positioning:**
 - "The 22 Immutable Laws of Marketing" (Ries & Trout) — расширение законов
 - "Obviously Awesome" (April Dunford) — современный positioning framework
+
+---
+
+## Дополнение: Alex Hormozi (под KUBRIK)
+
+Добавлены прикладные материалы по офферам и money models:
+
+- `hormozi-core-principles.md`
+- `hormozi-avatar-segmentation.md`
+- `hormozi-event-offer-playbook.md`
+- `hormozi-money-model-for-events.md`
+
+Фокус: упаковка оффера, выбор ICP, event-воронка и монетизация через attraction/upsell/downsell/continuity.

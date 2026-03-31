@@ -32,4 +32,4 @@ Append-only log of all knowledge base changes made by the automated news pipelin
 - `knowledge/google-ads/campaigns/demand-gen-campaigns.md` - создан KB-файл: Demand Gen кампании - новые функции марта 2026: Veo (генерация видео из изображений), YouTube Creator Partnerships boost (+30% конверсий на Shorts), оптимизация под follow-on views
 - `agents/contextologist/skill.md` - добавлена ссылка на `demand-gen-campaigns.md` в раздел источников знаний
 **Agents updated:** contextologist
-**Commit:** TBD
+**Commit:** 25d3c09

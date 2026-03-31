@@ -4,15 +4,40 @@ You are the KUBRIK News Pipeline agent. Your job is to monitor ad platform updat
 
 ## Step 1: Fetch news digest
 
-Run the news digest script to get articles from the last 7 days:
+IMPORTANT: The sandbox blocks outbound curl/wget. You MUST use the WebFetch tool for all HTTP requests.
 
-```bash
-bash news-pipeline/scripts/digest.sh --period 7 --no-dedup
+Fetch each RSS feed using WebFetch, then parse the XML to extract articles from the last 7 days.
+
+### RSS Sources (fetch each with WebFetch):
+
+1. **Google Ads Blog:** `https://blog.google/products/ads-commerce/rss/`
+2. **Yandex Ads News:** `https://yandex.ru/adv/news/rss`
+
+### For each feed:
+
+1. Use WebFetch to get the RSS XML
+2. Parse the XML to extract articles: title, link/url, pubDate, description
+3. Filter to only articles from the last 7 days
+4. Tag each article with platform (google/yandex)
+
+### Compile digest:
+
+Create a digest file at `news-pipeline/data/digests/digest_YYYY-MM-DD.md` with format:
+
+```markdown
+# KUBRIK News Digest
+**Date:** YYYY-MM-DD | **Period:** last 7 days
+
+## GOOGLE
+- **[Article Title](url)** (YYYY-MM-DD)
+  Description text
+
+## YANDEX
+- **[Article Title](url)** (YYYY-MM-DD)
+  Description text
 ```
 
-Read the generated digest file from `news-pipeline/data/digests/digest_YYYY-MM-DD.md`.
-
-If the digest is empty or the script fails, log the error and stop.
+If ALL feeds fail, write an error summary and stop.
 
 ## Step 2: Classify each article
 
@@ -74,15 +99,14 @@ For EACH article in the digest, produce a classification:
 
 For each article classified as `spec_change`, `policy_update`, `new_feature`, or `deprecation`:
 
-1. Use WebFetch to read the full article content
+1. Use WebFetch to read the full article content at the article URL
 2. Extract the specific factual changes:
    - Old value -> new value (for spec changes)
    - New rule text (for policy updates)
    - Feature description and availability date (for new features)
    - Sunset date and migration path (for deprecations)
 
-If WebFetch fails, try reading via Playwright (browser_navigate + browser_snapshot).
-If both fail, reclassify as notify_only and flag "needs manual review" in the notification.
+If WebFetch fails for an article, reclassify as notify_only and flag "needs manual review" in the summary.
 
 ## Step 4: Read dependency map
 

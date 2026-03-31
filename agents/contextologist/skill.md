@@ -123,18 +123,34 @@
 
 ### Яндекс Директ
 - `knowledge/yandex-direct-course/prais_launch_algorithm.md` - 8-шаговый алгоритм запуска
-- `knowledge/yandex-direct-course/transcripts/01_klyuchevye_zaprosy_sborka_rk.txt` - сбор ключей
-- `knowledge/yandex-direct-course/transcripts/02_nastroyka_rk_poisk.txt` - настройка поиска
-- `knowledge/yandex-direct-course/transcripts/03_master_kampaniy.txt` - мастер кампаний
-- `knowledge/yandex-direct-course/transcripts/04_rsya_direkt_kommander.txt` - РСЯ
-- `knowledge/yandex-direct-course/transcripts/09_chistka_poiskovykh_zaprosov.txt` - чистка запросов
-- `knowledge/yandex-direct-course/transcripts/10_retargeting.txt` - ретаргетинг
-- `knowledge/yandex-direct-course/transcripts/11_vedenie_rk.txt` - ведение кампаний
-- `knowledge/yandex-direct-course/transcripts/12_metrika_koltracking.txt` - Метрика и колтрекинг
-- `knowledge/yandex-direct-course/transcripts/13_mikroceli.txt` - микроцели
+- `knowledge/yandex-direct-course/transcripts/` - 16 транскриптов (ключи, поиск, МК, РСЯ, чистка, ретаргетинг, ведение, Метрика, микроцели)
+- `knowledge/yandex-direct-course/yandex-start-basics/` - основы контекста и логика запуска
+  - `context-basics-and-launch-logic.md`
+  - `economics-metrics-statistics-and-mistakes.md`
+  - `measurement-audience-and-value-proposition.md`
+- `knowledge/yandex-direct-course/metrica-advanced/` - продвинутая Метрика
+  - `behavior-attribution-and-conversion-diagnostics.md`
+  - `metrica-interface-reports-and-dashboards.md`
+  - `segmentation-sources-utm-and-audience-analysis.md`
+- `knowledge/yandex-direct-course/youtube-2026/` - свежие видео 2026
+  - `campaign-foundation-and-launch.md`
+  - `campaign-types-marketplaces-and-optimization.md`
+  - `measurement-search-rsya-and-retargeting.md`
+
+### SEO (синергия organic + paid)
+- `knowledge/seo-course/` - 10 файлов, 149K chars
+  - `ai-search-market-shift-and-signals.md` - сдвиг рынка поиска под AI
+  - `ai-visibility-audit-playbook.md` - аудит видимости
+  - `geo-ai-search-playbook.md` - гео-выдача и локальный поиск
+  - `ai-content-ops-and-prompting.md` - контент-операции
+  - `ai-authority-links-and-technical-hygiene.md` - ссылки и техническая гигиена
+  - `js-schema-and-modern-web-seo.md` - JS, schema, modern web
+  - `migrations-duplicates-and-index-cleanup.md` - миграции и индексация
+  - `ai-brand-monitoring-and-neural-mentions.md` - бренд-мониторинг
+  - `pbn-links-drops-and-deployment.md` - ссылочная стратегия
 
 ### Стратегические книги (через pipeline)
-- `knowledge/books/` - Schwartz (5 уровней осведомленности), Sugarman (24 триггера), Cialdini (7 принципов влияния)
+- `knowledge/books/` - Schwartz (5 уровней осведомленности), Sugarman (24 триггера), Cialdini (7 принципов влияния), Hormozi (офферы, аватары, event playbook)
 
 ### Референсы
 - `agents/references/platform-specs.md` - технические требования всех платформ

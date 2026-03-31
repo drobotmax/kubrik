@@ -14,3 +14,21 @@ Append-only log of all knowledge base changes made by the automated news pipelin
 **Agents updated:** [list]
 **Commit:** [hash]
 -->
+
+## 2026-03-31 | yandex new_feature
+**Source:** https://yandex.ru/adv/news/ycp-kak-poluchat-prodazhi-iz-otvetov-v-chate-s-alisoj-ai-i-iz-poiska-yandeksa
+**Classification:** new_feature (confidence: 90%)
+**Urgency:** important
+**Changes:**
+- `knowledge/yandex-direct-course/yandex-commerce-protocol-ycp.md` - создан файл: Yandex Commerce Protocol (YCP) - новый стандарт интеграции интернет-магазинов с ИИ, кнопка "Купить в 1 клик" в Алисе AI и Яндекс Поиске
+**Agents updated:** none (YCP не применим для недвижимости, агенты не обновлены)
+**Commit:** TBD
+
+## 2026-03-31 | google new_feature
+**Source:** https://blog.google/products/ads-commerce/demand-gen-drop-march-2026/
+**Classification:** new_feature (confidence: 85%)
+**Urgency:** important
+**Changes:**
+- `knowledge/google-ads/campaigns/demand-gen-campaigns.md` - создан файл: Demand Gen кампании - новые функции марта 2026: Veo (генерация видео из изображений), YouTube Creator Partnerships boost (+30% конверсий на Shorts), оптимизация под follow-on views
+**Agents updated:** none (best practices KB update, spec данные уже присутствуют в contextologist/skill.md)
+**Commit:** TBD

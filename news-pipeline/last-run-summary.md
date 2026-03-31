@@ -1,68 +1,26 @@
 # KUBRIK News Pipeline Run | 2026-03-31
 
-Articles: 5 | KB Updates: 0 | Skipped: 0 | Notify Only: 5
-
-## Classification Results
-
-### GOOGLE
-
-1. **Demand Gen Drop March 2026**
-   - url: https://blog.google/products/ads-commerce/demand-gen-drop-march-2026/
-   - category: notify_only (WebFetch 403 - needs manual review)
-   - urgency: informational
-   - confidence: N/A (fetch failed)
-   - reasoning: Потенциально new_feature (обновление форматов/возможностей Demand Gen), но full article недоступен
-
-2. **5 ways to collaborate with our agentic advisors**
-   - url: https://blog.google/products/ads-commerce/tips-to-collaborate-with-agentic-advisors/
-   - category: notify_only
-   - urgency: informational
-   - confidence: 90%
-   - reasoning: Советы по работе с Ads Advisor и Analytics Advisor - лучшие практики без продуктовых изменений
-
-3. **Ads Decoded episode 5 - effective lead gen**
-   - url: https://blog.google/products/ads-commerce/effective-lead-gen-practices/
-   - category: notify_only
-   - urgency: informational
-   - confidence: 90%
-   - reasoning: Общие советы по lead gen (lead scoring, data hygiene) - нет новых продуктовых изменений
-
-4. **Google Commerce Media Suite**
-   - url: https://blog.google/products/marketingplatform/360/googles-commerce-media-suite-where-retailer-insights-meet-the-power-of-youtube/
-   - category: notify_only (WebFetch 403 - needs manual review)
-   - urgency: informational
-   - confidence: N/A (fetch failed)
-   - reasoning: Потенциально new_feature (Commerce Media Suite + YouTube + retail insights), но full article недоступен
-
-### YANDEX
-
-5. **YCP: продажи из чата с Алисой AI и поиска Яндекса**
-   - url: https://yandex.ru/adv/news/ycp-kak-poluchat-prodazhi-iz-otvetov-v-chate-s-alisoj-ai-i-iz-poiska-yandeksa
-   - category: notify_only (WebFetch 403 - needs manual review)
-   - urgency: informational
-   - confidence: N/A (fetch failed)
-   - reasoning: Потенциально new_feature (реклама в ответах Алисы AI через YCP), но full article недоступен
+Articles: 5 | KB Updates: 2 | Notify Only: 2 | Skipped: 1
 
 ## KB Updates
 
-None.
+- **Google** (new_feature, important, 85%): Demand Gen Drop March 2026 - новые функции Demand Gen кампаний: Veo (генерация видео из статичных изображений для достижения Ad Strength "Excellent"), YouTube Creator Partnerships boost (+30% конверсий на Shorts при сохранении CPA), оптимизация под follow-on views
+  -> `knowledge/google-ads/campaigns/demand-gen-campaigns.md` (создан)
+
+- **Yandex** (new_feature, important, 90%): Yandex Commerce Protocol (YCP) - первый российский стандарт интеграции интернет-магазинов с ИИ. Кнопка "Купить в 1 клик" в Алисе AI и Яндекс Поиске. 19M+ пользователей Алисы в неделю, ~30% покупок оформляются прямо в чате. Подключение бесплатно. Для недвижимости не применимо (только физические товары).
+  -> `knowledge/yandex-direct-course/yandex-commerce-protocol-ycp.md` (создан)
 
 ## Notify Only
-- Google: Demand Gen Drop March 2026 - нужна ручная проверка (403)
-- Google: Tips for agentic advisors - best practices, no action
-- Google: Effective lead gen practices (Ads Decoded ep.5) - best practices, no action
-- Google: Commerce Media Suite + YouTube - нужна ручная проверка (403)
-- Yandex: YCP / Alice AI chat ads - нужна ручная проверка (403)
+
+- **Google**: "5 ways to collaborate with agentic advisors" - best practices по Ads Advisor и Analytics Advisor, без изменений продукта (confidence 80%)
+- **Google**: "Commerce Media Suite: Kroger + YouTube" - интеграция DV360 с Kroger Precision Marketing, SKU-level conversion reporting. Инструмент Display & Video 360 (enterprise), вне стандартного стека Google Ads для недвижимости.
+
+## Skipped
+
+- **Google**: "Ads Decoded episode 5: lead gen" - видеоподкаст о best practices, без конкретных product changes (confidence 60%)
 
 ## Breaking
 
-None.
+Нет.
 
-## Needs Manual Review
-
-Три статьи потенциально содержат новые функции, но WebFetch вернул 403:
-1. https://blog.google/products/ads-commerce/demand-gen-drop-march-2026/
-2. https://blog.google/products/marketingplatform/360/googles-commerce-media-suite-where-retailer-insights-meet-the-power-of-youtube/
-3. https://yandex.ru/adv/news/ycp-kak-poluchat-prodazhi-iz-otvetov-v-chate-s-alisoj-ai-i-iz-poiska-yandeksa
-
-Commit: no changes (all notify_only)
+Commit: ffb5ab4

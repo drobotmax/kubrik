@@ -61,3 +61,4 @@ See `prais_launch_algorithm.md` for the full text.
 ## Additional module
 
 - `youtube-2026/README.md` - separate YouTube course on Yandex Direct 2026 with launch, search, RSYA, retargeting and optimization notes
+- `yandex-start-basics/README.md` - official Yandex start course with fundamentals, Metrica, USP, economics and common mistakes

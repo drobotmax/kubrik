@@ -76,14 +76,18 @@ For EACH article in the digest, produce a classification:
 
 For each article classified as `spec_change`, `policy_update`, `new_feature`, or `deprecation`:
 
-1. Use WebFetch to read the full article content at the article URL
-2. Extract the specific factual changes:
+1. Find the pre-fetched full text in `news-pipeline/data/articles/`. Files are named `{platform}_{urlhash}.md`.
+   ```bash
+   ls news-pipeline/data/articles/
+   ```
+2. Read the matching article file
+3. Extract the specific factual changes:
    - Old value -> new value (for spec changes)
    - New rule text (for policy updates)
    - Feature description and availability date (for new features)
    - Sunset date and migration path (for deprecations)
 
-If WebFetch fails for an article, reclassify as notify_only and flag "needs manual review" in the summary.
+If no pre-fetched article file exists, classify as notify_only and flag "full text not available" in the summary.
 
 ## Step 4: Read dependency map
 

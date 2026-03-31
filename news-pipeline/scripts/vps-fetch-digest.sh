@@ -134,10 +134,83 @@ log "Total articles fetched: $TOTAL"
 
 log "Digest written: $DIGEST_FILE"
 
+# --- Fetch full text for each article ---
+ARTICLES_DIR="$DATA_DIR/articles"
+mkdir -p "$ARTICLES_DIR"
+
+log "Fetching full article texts..."
+FETCHED_COUNT=0
+
+if [ -s "$BLOGS_TSV" ]; then
+    while IFS=$'\t' read -r _date _platform _title _url _summary; do
+        [ -z "$_url" ] && continue
+
+        # Generate filename from URL hash
+        _hash=$(echo -n "$_url" | sha256sum | cut -c1-12)
+        _article_file="$ARTICLES_DIR/${_platform}_${_hash}.md"
+
+        # Skip if already fetched
+        if [ -s "$_article_file" ]; then
+            log "  Already cached: $_title"
+            continue
+        fi
+
+        log "  Fetching: $_title"
+        sleep 2
+
+        # Fetch HTML
+        _raw_html=$(curl -sL \
+            -H "Accept-Language: en-US,en;q=0.9,ru;q=0.5" \
+            -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" \
+            --max-time 20 \
+            "$_url" 2>/dev/null)
+
+        if [ -z "$_raw_html" ]; then
+            log "  WARNING: empty response for $_url"
+            continue
+        fi
+
+        # Extract text content: strip HTML tags, scripts, styles
+        # Keep paragraph text, headers, list items
+        _clean_text=$(echo "$_raw_html" | \
+            sed 's/<script[^>]*>.*<\/script>//g' | \
+            sed 's/<style[^>]*>.*<\/style>//g' | \
+            sed 's/<nav[^>]*>.*<\/nav>//g' | \
+            sed 's/<footer[^>]*>.*<\/footer>//g' | \
+            sed 's/<header[^>]*>.*<\/header>//g' | \
+            sed 's/<[^>]*>//g' | \
+            sed 's/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/"/g' | \
+            sed 's/^[[:space:]]*$//' | \
+            cat -s | \
+            head -500)
+
+        if [ -n "$_clean_text" ] && [ ${#_clean_text} -gt 100 ]; then
+            {
+                echo "# $_title"
+                echo ""
+                echo "Source: $_url"
+                echo "Platform: $_platform"
+                echo "Date: $_date"
+                echo "Fetched: $TODAY"
+                echo ""
+                echo "---"
+                echo ""
+                echo "$_clean_text"
+            } > "$_article_file"
+            FETCHED_COUNT=$((FETCHED_COUNT + 1))
+            log "  -> saved ($(wc -c < "$_article_file" | tr -d ' ') bytes)"
+        else
+            log "  WARNING: content too short or empty for $_url"
+        fi
+    done < "$BLOGS_TSV"
+fi
+
+log "Full texts fetched: $FETCHED_COUNT"
+
 # --- Commit and push ---
 if [ "$TOTAL" -gt 0 ]; then
     cd "$REPO_DIR"
-    git add news-pipeline/data/digests/ news-pipeline/data/fetch.log news-pipeline/cache/ 2>/dev/null || true
+    git add news-pipeline/data/ news-pipeline/cache/ 2>/dev/null || true
     git commit -m "news-pipeline: fetch digest $TODAY ($TOTAL articles)
 
 Co-Authored-By: VPS Cron <noreply@kubrik.dev>" --quiet 2>/dev/null || true

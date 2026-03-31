@@ -170,19 +170,8 @@ if [ -s "$BLOGS_TSV" ]; then
             continue
         fi
 
-        # Extract text content: strip HTML tags, scripts, styles
-        # Keep paragraph text, headers, list items
-        _clean_text=$(echo "$_raw_html" | \
-            sed 's/<script[^>]*>.*<\/script>//g' | \
-            sed 's/<style[^>]*>.*<\/style>//g' | \
-            sed 's/<nav[^>]*>.*<\/nav>//g' | \
-            sed 's/<footer[^>]*>.*<\/footer>//g' | \
-            sed 's/<header[^>]*>.*<\/header>//g' | \
-            sed 's/<[^>]*>//g' | \
-            sed 's/&nbsp;/ /g; s/&amp;/\&/g; s/&lt;/</g; s/&gt;/>/g; s/&quot;/"/g' | \
-            sed 's/^[[:space:]]*$//' | \
-            cat -s | \
-            head -500)
+        # Extract text content using Python HTML parser
+        _clean_text=$(echo "$_raw_html" | python3 "$SCRIPTS_DIR/html2text.py" 2>/dev/null)
 
         if [ -n "$_clean_text" ] && [ ${#_clean_text} -gt 100 ]; then
             {

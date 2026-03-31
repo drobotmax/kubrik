@@ -8,3 +8,21 @@
 [2026-03-31 17:08:32] Digest written: /Users/drobotmaxim/kubrik/news-pipeline/data/digests/digest_2026-03-31.md
 [2026-03-31 17:08:35] Pushed to repo
 [2026-03-31 17:08:35] === KUBRIK News Fetch Complete ===
+[2026-03-31 14:14:28] === KUBRIK News Fetch Starting ===
+[2026-03-31 14:14:28] Period: 7 days (since 2026-03-24)
+[2026-03-31 14:14:28] Fetching: Google Ads Blog (google)...
+[2026-03-31 14:14:30]   -> 4 articles total so far
+[2026-03-31 14:14:30] Fetching: Yandex Ads News (yandex)...
+[2026-03-31 14:14:33]   -> 5 articles total so far
+[2026-03-31 14:14:33] Total articles fetched: 5
+[2026-03-31 14:14:33] Digest written: /home/maxos/kubrik/news-pipeline/data/digests/digest_2026-03-31.md
+[2026-03-31 14:14:33] WARNING: push failed
+[2026-03-31 14:14:33] === KUBRIK News Fetch Complete ===
+[2026-03-31 14:15:29] === KUBRIK News Fetch Starting ===
+[2026-03-31 14:15:31] Period: 7 days (since 2026-03-24)
+[2026-03-31 14:15:31] Fetching: Google Ads Blog (google)...
+[2026-03-31 14:15:32]   -> 4 articles total so far
+[2026-03-31 14:15:32] Fetching: Yandex Ads News (yandex)...
+[2026-03-31 14:15:35]   -> 5 articles total so far
+[2026-03-31 14:15:35] Total articles fetched: 5
+[2026-03-31 14:15:35] Digest written: /home/maxos/kubrik/news-pipeline/data/digests/digest_2026-03-31.md

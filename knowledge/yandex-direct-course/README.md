@@ -57,3 +57,7 @@ Transcribed: 2026-03-30 via mlx-whisper (medium model)
 Full text of Prais's step-by-step new project launch algorithm is in the channel
 (message 46) - covers Steps 0-8 from Metrica check through optimization.
 See `prais_launch_algorithm.md` for the full text.
+
+## Additional module
+
+- `youtube-2026/README.md` - separate YouTube course on Yandex Direct 2026 with launch, search, RSYA, retargeting and optimization notes

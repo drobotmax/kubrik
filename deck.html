@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KUBRIK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg: #fafafa;
+  --text: #1a1a1a;
+  --text-2: #555;
+  --text-3: #888;
+  --accent: #1a56db;
+  --accent-light: #e8eefb;
+  --border: #e0e0e0;
+  --card-bg: #fff;
+}
+
+html, body {
+  width:100%; height:100%; overflow:hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.deck { width:100%; height:100%; position:relative; }
+
+.slide {
+  position:absolute; inset:0;
+  width:100vw; height:100vh;
+  display:flex; align-items:center; justify-content:center;
+  opacity:0; transform:translateX(40px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events:none;
+  padding: 60px 80px;
+}
+.slide.active { opacity:1; transform:translateX(0); pointer-events:auto; }
+.slide.prev { opacity:0; transform:translateX(-40px); }
+
+.slide-inner { max-width:1060px; width:100%; }
+
+/* Typography */
+h1 { font-size:5.5rem; font-weight:900; letter-spacing:-0.03em; line-height:1; }
+h2 { font-size:2.4rem; font-weight:700; letter-spacing:-0.02em; line-height:1.2; margin-bottom:2rem; color:var(--text); }
+.label { font-size:0.75rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem; display:block; }
+
+/* Accent color for KUBRIK logo only */
+.logo-text { color: var(--accent); }
+
+/* Cards - clean, no glass */
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px;
+}
+.card-label {
+  font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--accent); margin-bottom:16px;
+}
+.card p {
+  font-size:0.92rem; color:var(--text-2); line-height:1.7;
+  padding:8px 0;
+  border-bottom:1px solid #f0f0f0;
+}
+.card p:last-child { border-bottom:none; }
+
+/* Grids */
+.g3 { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.g4 { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+
+/* Solution items */
+.sol-item { background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:24px; }
+.sol-item .num { font-size:2.2rem; font-weight:800; color:var(--accent); line-height:1; margin-bottom:10px; }
+.sol-item h3 { font-size:0.95rem; font-weight:600; color:var(--text); margin-bottom:6px; }
+.sol-item p { font-size:0.88rem; color:var(--text-2); line-height:1.5; }
+
+/* How it works - left-aligned text block */
+.text-block { max-width:720px; }
+.text-block p { font-size:1.05rem; color:var(--text-2); line-height:1.8; margin-bottom:1.2rem; }
+.text-block strong { color:var(--text); font-weight:600; }
+.text-block .highlight {
+  font-size:1.15rem; color:var(--text); font-weight:500;
+  border-left:3px solid var(--accent); padding-left:16px; margin-top:1.5rem;
+}
+
+/* Platform pills */
+.pill-grid { display:flex; flex-wrap:wrap; gap:8px; }
+.pill {
+  display:inline-flex; align-items:center; gap:6px;
+  padding:8px 16px; border-radius:8px;
+  border:1px solid var(--border);
+  background:var(--card-bg);
+  font-size:0.85rem; font-weight:500; color:var(--text);
+}
+.pill-icon { width:14px; height:14px; opacity:0.7; }
+
+/* Platform categories */
+.plat-section { margin-bottom:20px; }
+.plat-label { font-size:0.7rem; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-3); margin-bottom:8px; }
+
+/* Steps */
+.step { background:var(--card-bg); border:1px solid var(--border); border-radius:12px; padding:28px; text-align:left; }
+.step .num { font-size:2.8rem; font-weight:800; color:var(--accent); line-height:1; margin-bottom:12px; }
+.step h3 { font-size:1rem; font-weight:600; margin-bottom:6px; }
+.step p { font-size:0.88rem; color:var(--text-2); line-height:1.5; }
+
+/* Contact */
+.contact-links { display:flex; gap:12px; margin-top:2rem; }
+.contact-link {
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 32px; border-radius:10px;
+  background:var(--accent); color:#fff;
+  font-size:0.95rem; font-weight:600;
+  text-decoration:none; border:none; cursor:pointer;
+  transition: background 0.2s;
+}
+.contact-link:hover { background:#153fb3; }
+.contact-link.outline {
+  background:transparent; color:var(--accent);
+  border:1px solid var(--accent);
+}
+.contact-link.outline:hover { background:var(--accent-light); }
+
+/* Divider */
+.sep { height:1px; background:var(--border); margin:2rem 0; }
+
+/* Counter */
+.counter {
+  position:fixed; bottom:24px; right:32px;
+  font-size:0.75rem; color:var(--text-3); font-weight:500; z-index:100;
+}
+
+/* Footer line on slide 1 */
+.title-footer {
+  position:absolute; bottom:60px; left:80px;
+  font-size:0.8rem; color:var(--text-3);
+}
+
+@media (max-width:768px) {
+  h1 { font-size:3rem; }
+  h2 { font-size:1.6rem; }
+  .g3, .g4 { grid-template-columns:1fr; }
+  .slide { padding:24px 24px; }
+  .title-footer { left:24px; bottom:24px; }
+}
+</style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- SLIDE 1: TITLE -->
+  <div class="slide active" data-slide="0">
+    <div class="slide-inner">
+      <span class="label">Маркетинг нового поколения</span>
+      <h1 class="logo-text" style="margin-bottom:1.5rem;">KUBRIK</h1>
+      <p style="font-size:1.3rem; color:var(--text-2); line-height:1.6; max-width:560px;">AI-маркетинг-отдел для девелоперов и агентств недвижимости</p>
+    </div>
+    <div class="title-footer">kubrik.ai</div>
+  </div>
+
+  <!-- SLIDE 2: PROBLEMS -->
+  <div class="slide" data-slide="1">
+    <div class="slide-inner">
+      <span class="label">Проблема</span>
+      <h2>Почему ваш маркетинг не эффективен</h2>
+      <div class="g3">
+        <div class="card">
+          <div class="card-label">Люди</div>
+          <p>Нет возможности нанять лидеров отрасли в команду</p>
+          <p>Ваши возможности ограничены навыками сотрудников</p>
+          <p>Человеческий фактор</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Бюджеты</div>
+          <p>Высокий ФОТ и инфраструктурные расходы</p>
+          <p>Нет таких бюджетов как у гигантов рынка</p>
+        </div>
+        <div class="card">
+          <div class="card-label">Подход</div>
+          <p>Нет системного и научного подхода, вы просто тестируете гипотезы</p>
+          <p>Отсутствует прозрачная сквозная аналитика</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: SOLUTION -->
+  <div class="slide" data-slide="2">
+    <div class="slide-inner">
+      <span class="label">Решение</span>
+      <h2>Как вам поможет KUBRIK</h2>
+      <div class="g4">
+        <div class="sol-item">
+          <div class="num">01</div>
+          <h3>Системность</h3>
+          <p>В сервис зашиты лучшие мировые практики и фреймворки</p>
+        </div>
+        <div class="sol-item">
+          <div class="num">02</div>
+          <h3>Гиперскорость</h3>
+          <p>Запускаем десятки рекламных кампаний за сутки</p>
+        </div>
+        <div class="sol-item">
+          <div class="num">03</div>
+          <h3>Прозрачность</h3>
+          <p>Единый дашборд со сквозной аналитикой</p>
+        </div>
+        <div class="sol-item">
+          <div class="num">04</div>
+          <h3>Оптимизация</h3>
+          <p>Сокращаем ФОТ и операционку</p>
+        </div>
+      </div>
+      <p style="margin-top:2rem; font-size:1.05rem; color:var(--accent); font-weight:600;">Кратный рост эффективности маркетинга</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: HOW IT WORKS -->
+  <div class="slide" data-slide="3">
+    <div class="slide-inner">
+      <span class="label">Как это работает</span>
+      <h2>Как работает KUBRIK</h2>
+      <div class="text-block">
+        <p>KUBRIK это огромная самообучающаяся сеть агентов и модулей, которые работают самостоятельно и согласовывают действия между собой. Мы автоматизируем рутину и усиливаем команду, а ключевые решения остаются под вашим контролем.</p>
+        <p><strong>На вас будут работать:</strong> Контекстолог, Аналитик, Дизайнер, Копирайтер, Таргетолог, Стратег, Медиапланер, Авитолог, специалисты по SMM, SEO, GEO и многие другие</p>
+        <p><strong>Вы общаетесь с одним старшим представителем,</strong> который координирует всю команду</p>
+        <div class="highlight">Если коротко: вы получаете с десяток лучших специалистов на рынке которые работают 24/7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: PLATFORMS -->
+  <div class="slide" data-slide="4">
+    <div class="slide-inner">
+      <span class="label">Площадки</span>
+      <h2>С какими площадками работает KUBRIK</h2>
+      <div class="plat-section">
+        <div class="plat-label">Реклама</div>
+        <div class="pill-grid">
+          <span class="pill"><img src="https://cdn.simpleicons.org/google/1a1a1a" alt="" class="pill-icon">Google</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/yandexcloud/1a1a1a" alt="" class="pill-icon">Яндекс</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/instagram/1a1a1a" alt="" class="pill-icon">Instagram</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/facebook/1a1a1a" alt="" class="pill-icon">Facebook</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/tiktok/1a1a1a" alt="" class="pill-icon">TikTok</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/vk/1a1a1a" alt="" class="pill-icon">VK</span>
+          <span class="pill">Авито</span>
+          <span class="pill">Циан</span>
+          <span class="pill">Яндекс.Недвижимость</span>
+        </div>
+      </div>
+      <div class="plat-section">
+        <div class="plat-label">Контент и соцсети</div>
+        <div class="pill-grid">
+          <span class="pill"><img src="https://cdn.simpleicons.org/youtube/1a1a1a" alt="" class="pill-icon">YouTube</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/telegram/1a1a1a" alt="" class="pill-icon">Telegram</span>
+          <span class="pill">Дзен</span>
+          <span class="pill">VC</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/reddit/1a1a1a" alt="" class="pill-icon">Reddit</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/linkedin/1a1a1a" alt="" class="pill-icon">LinkedIn</span>
+        </div>
+      </div>
+      <div class="plat-section">
+        <div class="plat-label">Аналитика и CRM</div>
+        <div class="pill-grid">
+          <span class="pill"><img src="https://cdn.simpleicons.org/amocrm/1a1a1a" alt="" class="pill-icon">AmoCRM</span>
+          <span class="pill">Битрикс24</span>
+          <span class="pill">Яндекс Метрика</span>
+          <span class="pill"><img src="https://cdn.simpleicons.org/googleanalytics/1a1a1a" alt="" class="pill-icon">Google Analytics</span>
+        </div>
+      </div>
+      <div class="sep"></div>
+      <p style="font-size:1rem; color:var(--text-2);">Мы не очередной ваш подрядчик, а встроенный отдел маркетинга</p>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: ONBOARDING -->
+  <div class="slide" data-slide="5">
+    <div class="slide-inner">
+      <span class="label">Подключение</span>
+      <h2>Как подключить</h2>
+      <p style="font-size:1.1rem; color:var(--text-2); margin-bottom:2.5rem; max-width:600px;">Мы все сделаем за вас! Вы предоставляете данные - мы полностью готовый отдел маркетинга, за 14 дней!</p>
+      <div class="g3">
+        <div class="step">
+          <div class="num">01</div>
+          <h3>Бриф и данные</h3>
+          <p>Вы предоставляете информацию о проекте и доступы</p>
+        </div>
+        <div class="step">
+          <div class="num">02</div>
+          <h3>Настройка</h3>
+          <p>Мы подключаем площадки, аналитику и запускаем агентов</p>
+        </div>
+        <div class="step">
+          <div class="num">03</div>
+          <h3>Запуск</h3>
+          <p>Полностью готовый отдел маркетинга за 14 дней</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 7: CONTACTS -->
+  <div class="slide" data-slide="6">
+    <div class="slide-inner">
+      <span class="label">Контакты</span>
+      <h2 style="font-size:2.8rem;">Давайте обсудим</h2>
+      <p style="font-size:1.05rem; color:var(--text-2); margin-bottom:0.5rem; max-width:480px;">30 минут - покажем, как KUBRIK сработает для вашего объекта</p>
+      <div class="contact-links">
+        <a class="contact-link" href="#">Telegram</a>
+        <a class="contact-link outline" href="#">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="counter" id="counter">1 / 7</div>
+
+<script>
+(function(){
+  const slides = document.querySelectorAll('.slide');
+  const counter = document.getElementById('counter');
+  let cur = 0, total = slides.length;
+
+  function go(n){
+    if(n<0||n>=total||n===cur) return;
+    slides[cur].classList.remove('active');
+    slides[cur].classList.add(n>cur?'prev':'');
+    let old=cur; cur=n;
+    slides[cur].classList.remove('prev');
+    slides[cur].classList.add('active');
+    counter.textContent=(cur+1)+' / '+total;
+    setTimeout(()=>slides[old].classList.remove('prev'),500);
+  }
+
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){e.preventDefault();go(cur+1);}
+    if(e.key==='ArrowLeft'||e.key==='ArrowUp'){e.preventDefault();go(cur-1);}
+  });
+
+  document.getElementById('deck').addEventListener('click',e=>{
+    if(e.target.closest('a,button')) return;
+    e.clientX>innerWidth/2?go(cur+1):go(cur-1);
+  });
+
+  let tx=0;
+  document.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX},{passive:true});
+  document.addEventListener('touchend',e=>{
+    let dx=e.changedTouches[0].clientX-tx;
+    if(Math.abs(dx)>50){dx<0?go(cur+1):go(cur-1);}
+  },{passive:true});
+})();
+</script>
+</body>
+</html>

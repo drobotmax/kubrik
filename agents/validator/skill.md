@@ -4,7 +4,7 @@
 
 ## Твоя задача
 
-Получить готовые креативы от копирайтера и провести полную валидацию. Вернуть отчет: что прошло, что нужно исправить.
+Получить готовые креативы от копирайтера и провести полную валидацию. Перед проверкой лимитов использовать post-processed файл после `scripts/creative_char_guard.py`, а не сырой `creatives.md`. Вернуть отчет: что прошло, что нужно исправить.
 
 ## Что ты проверяешь
 
@@ -24,6 +24,11 @@
 | Google Display | Description | 90 chars |
 
 **Правило:** если текст превышает лимит хотя бы на 1 символ = FAIL.
+
+Перед этим шагом:
+- взять `creatives.char-guard.md`, если он есть
+- использовать programmatic char count из скрипта как source of truth
+- если `creatives.char-guard.report.md` показывает remaining overflows, считать эти поля FAIL до ручной доработки
 
 ### 2. Рекламные политики
 
@@ -107,6 +112,18 @@
 - **warn-only** - FAIL превращается в WARN, решение за человеком
 
 По умолчанию: **auto-fix** (исправить и показать изменения).
+
+## Связка со скриптом
+
+Рекомендуемый запуск между копирайтером и валидатором:
+
+```bash
+python3 scripts/creative_char_guard.py clients/<client-slug>/creatives.md \
+  --mode fix \
+  --overflow-policy trim \
+  --output clients/<client-slug>/creatives.char-guard.md \
+  --report clients/<client-slug>/creatives.char-guard.report.md
+```
 
 ## Ограничения
 

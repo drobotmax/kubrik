@@ -191,6 +191,20 @@ h1 {
     font-size: clamp(60px, 8vw, 104px);
 }
 
+.hero-title {
+    font-size: clamp(92px, 14vw, 184px);
+    line-height: 0.88;
+    letter-spacing: -0.08em;
+    margin: 0;
+}
+
+.hero-subtitle {
+    max-width: 760px;
+    font-size: clamp(18px, 2vw, 30px);
+    line-height: 1.2;
+    color: var(--muted);
+}
+
 h2 {
     font-size: clamp(38px, 5.2vw, 72px);
 }
@@ -444,6 +458,132 @@ h2 {
     background: rgba(255, 255, 255, 0.02);
 }
 
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.brand-item {
+    min-height: 78px;
+    padding: 14px 14px 12px;
+    border-radius: 22px;
+    border: 1px solid var(--line);
+    background: rgba(10, 22, 38, 0.62);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.brand-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    opacity: 0.96;
+}
+
+.brand-item span {
+    font-size: 11px;
+    color: var(--muted);
+    line-height: 1.15;
+}
+
+.brand-item.wordmark strong {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.brand-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20px;
+}
+
+.brand-mark.yandex {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: var(--text);
+}
+
+.brand-mark.yandex .ya {
+    color: #ff4d4f;
+    margin-right: 1px;
+}
+
+.brand-mark.avito {
+    gap: 4px;
+}
+
+.brand-mark.avito span {
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.brand-mark.avito .c1 { background: #97cf26; }
+.brand-mark.avito .c2 { background: #ff6163; }
+.brand-mark.avito .c3 { background: #8a56ff; }
+.brand-mark.avito .c4 { background: #00c1ff; }
+
+.brand-mark.dzen {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.92);
+    position: relative;
+}
+
+.brand-mark.dzen::before,
+.brand-mark.dzen::after {
+    content: "";
+    position: absolute;
+    inset: 4px;
+    border: 2px solid rgba(255,255,255,0.92);
+    border-radius: 50%;
+}
+
+.brand-mark.bitrix,
+.brand-mark.amocrm {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text);
+}
+
+.brand-mark.bitrix .num24 {
+    color: #2fc7f7;
+}
+
+.brand-mark.amocrm .amo {
+    text-transform: lowercase;
+}
+
+.platform-slide h2 {
+    max-width: 900px;
+    font-size: clamp(34px, 4.8vw, 64px);
+    margin-bottom: 6px;
+}
+
+.platform-slide .frame {
+    gap: 18px;
+}
+
+.platform-slide .lead {
+    font-size: clamp(16px, 1.7vw, 24px);
+}
+
+.platform-slide .divider {
+    margin-top: 4px;
+}
+
 .table {
     border-radius: 24px;
     overflow: hidden;
@@ -597,6 +737,89 @@ h2 {
     max-width: 640px;
 }
 
+.contact-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 180px;
+    padding: 16px 28px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)),
+        rgba(10, 22, 38, 0.72);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.divider {
+    width: min(100%, 420px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(89,184,255,0.85), transparent);
+    opacity: 0.75;
+}
+
+.quote-block {
+    display: grid;
+    gap: 18px;
+    max-width: 940px;
+}
+
+.quote-text {
+    font-size: 20px;
+    line-height: 1.55;
+    color: var(--muted);
+    max-width: 920px;
+}
+
+.quote-highlight {
+    color: var(--text);
+    font-weight: 700;
+}
+
+.card-glow {
+    position: relative;
+    padding: 22px;
+    border-radius: 24px;
+    background: rgba(10, 22, 38, 0.84);
+    border: 1px solid rgba(89, 184, 255, 0.14);
+    overflow: hidden;
+}
+
+.card-glow::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(89,184,255,0.08), transparent 40%, rgba(89,184,255,0.04));
+    pointer-events: none;
+}
+
+.sol-num {
+    position: relative;
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--accent);
+    margin-bottom: 16px;
+}
+
+.tagline {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text);
+}
+
 .contact-line {
     padding: 18px 20px;
     border-radius: 18px;
@@ -640,7 +863,8 @@ h2 {
     .compare-grid,
     .solution-map,
     .proof-row,
-    .pipeline {
+    .pipeline,
+    .brand-grid {
         grid-template-columns: 1fr;
     }
 
@@ -657,6 +881,10 @@ h2 {
     .pipe::after {
         display: none;
     }
+
+    .quote-text {
+        font-size: 17px;
+    }
 }
 </style>
 </head>
@@ -672,29 +900,12 @@ h2 {
 
 <main class="deck" id="deck">
     <section class="slide active">
-        <div class="frame spread">
-            <div>
+        <div class="frame spread" style="align-items:center; text-align:center;">
+            <div style="width:100%; display:flex; flex-direction:column; align-items:center; gap:22px;">
                 <div class="eyebrow">KUBRIK</div>
-                <h1>KUBRIK</h1>
-                <p class="lead">Встроенный отдел маркетинга для застройщиков</p>
-                <p class="subline">Быстрее, системнее и дешевле, чем нанимать штат.</p>
-            </div>
-            <div class="hero-grid">
-                <div class="hero-figure">
-                    <div class="hero-mark">KBRK</div>
-                </div>
-                <div class="fact-stack" style="grid-template-columns: 1fr;">
-                    <div class="card">
-                        <div class="card-icon">Формат</div>
-                        <h3>Сервис, а не подрядчик</h3>
-                        <p>Один старший представитель, одна система управления, одна зона ответственности.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">Срок</div>
-                        <h3>14 дней до запуска</h3>
-                        <p>От брифа до первых кампаний и сквозной аналитики.</p>
-                    </div>
-                </div>
+                <h1 class="hero-title">KUBRIK</h1>
+                <p class="hero-subtitle">AI-маркетинг-отдел для девелоперов и агентств недвижимости</p>
+                <div class="divider"></div>
             </div>
         </div>
     </section>
@@ -702,33 +913,28 @@ h2 {
     <section class="slide">
         <div class="frame">
             <div class="eyebrow">Проблема</div>
-            <h2>Почему маркетинг<br>застройщиков буксует</h2>
+            <h2>Почему ваш маркетинг<br>не эффективен</h2>
             <div class="grid-3">
                 <div class="card">
                     <div class="card-icon">Люди</div>
-                    <h3>Штат упирается в потолок</h3>
                     <ul>
-                        <li>Сильных лидеров рынка трудно нанять на зарплату девелопера.</li>
-                        <li>Ваш результат ограничен уровнем 2-3 сотрудников.</li>
-                        <li>Болезни, увольнения и выгорание останавливают темп.</li>
+                        <li>Нет возможности нанять лидеров отрасли в команду.</li>
+                        <li>Ваши возможности ограничены навыками сотрудников.</li>
+                        <li>Человеческий фактор.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <div class="card-icon">Деньги</div>
-                    <h3>ФОТ съедает гибкость</h3>
+                    <div class="card-icon">Бюджеты</div>
                     <ul>
-                        <li>Маркетолог, трафик, копирайтер, аналитик, дизайнер - это 500-800К в месяц.</li>
-                        <li>Рекламный бюджет ниже, чем у крупнейших игроков.</li>
-                        <li>CRM, аналитика и инструменты добавляют постоянные расходы.</li>
+                        <li>Высокий ФОТ и инфраструктурные расходы.</li>
+                        <li>Нет таких бюджетов, как у гигантов рынка.</li>
                     </ul>
                 </div>
                 <div class="card">
-                    <div class="card-icon">Система</div>
-                    <h3>Маркетинг живёт рывками</h3>
+                    <div class="card-icon">Подход</div>
                     <ul>
-                        <li>Тестируются 2 кампании в неделю, когда рынку нужно 20.</li>
-                        <li>Нет аналитики от клика до сделки.</li>
-                        <li>Каналы живут отдельно, а не в одной стратегии.</li>
+                        <li>Нет системного и научного подхода, вы просто тестируете гипотезы.</li>
+                        <li>Отсутствует прозрачная сквозная аналитика.</li>
                     </ul>
                 </div>
             </div>
@@ -738,322 +944,133 @@ h2 {
     <section class="slide">
         <div class="frame">
             <div class="eyebrow">Решение</div>
-            <h2>Что вы получаете<br>с KUBRIK</h2>
-            <p class="lead">Полноценный маркетинговый отдел из 10+ специалистов. Вы общаетесь с одним старшим представителем, а ключевые решения остаются под вашим контролем.</p>
-            <div class="solution-map">
-                <div class="node">
-                    <h3>Клиент</h3>
-                    <p>Объект, бюджет, цели, материалы, финальное утверждение.</p>
-                </div>
-                <div class="node center">
-                    <h3>Старший представитель</h3>
-                    <p>Координирует стратегию, темп, отчётность и работу всех направлений.</p>
-                </div>
-                <div class="node">
-                    <h3>Команда специалистов</h3>
-                    <div class="team-cloud">
-                        <span>Стратег</span>
-                        <span>Контекстолог</span>
-                        <span>Таргетолог</span>
-                        <span>Копирайтер</span>
-                        <span>Аналитик</span>
-                        <span>Дизайнер</span>
-                        <span>Авитолог</span>
-                        <span>SEO</span>
-                        <span>SMM</span>
-                    </div>
-                </div>
-            </div>
-            <p class="footnote">Команда работает 24/7 и не зависит от отпусков, больничных и найма нового штата.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="frame">
-            <div class="eyebrow">Сравнение</div>
-            <h2>Почему не агентство<br>и не фрилансеры</h2>
-            <div class="table">
-                <div class="table-header">
-                    <div>Параметр</div>
-                    <div>Штат</div>
-                    <div>Агентство</div>
-                    <div>KUBRIK</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Стоимость/мес</strong></div>
-                    <div>500-800К</div>
-                    <div>150-300К</div>
-                    <div class="best">от 150К*</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Скорость запуска</strong></div>
-                    <div>1-2 месяца</div>
-                    <div>2-4 недели</div>
-                    <div class="best">14 дней</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Каналы</strong></div>
-                    <div>2-3</div>
-                    <div>3-5</div>
-                    <div class="best">10+</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Креативы/мес</strong></div>
-                    <div>5-10</div>
-                    <div>10-20</div>
-                    <div class="best">50+</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Аналитика</strong></div>
-                    <div>Ручная</div>
-                    <div>Раз в месяц</div>
-                    <div class="best">В реальном времени</div>
-                </div>
-                <div class="table-row">
-                    <div><strong>Масштабирование</strong></div>
-                    <div>Новый найм</div>
-                    <div>Новый тариф</div>
-                    <div class="best">Сразу</div>
-                </div>
-            </div>
-            <p class="subline">Мы не очередной подрядчик. Мы встроенный отдел, который работает как ваш собственный, но заметно быстрее.</p>
-            <p class="footnote">*Финальный пакет зависит от состава каналов и объёма работ.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="frame">
-            <div class="eyebrow">Процесс</div>
-            <h2>Как работает KUBRIK</h2>
-            <div class="pipeline">
-                <div class="pipe">
-                    <h3>Ваш бриф</h3>
-                    <div class="pipe-caption">День 1</div>
-                </div>
-                <div class="pipe">
-                    <h3>Стратегия</h3>
-                    <div class="pipe-caption">1-2 дня</div>
-                </div>
-                <div class="pipe">
-                    <h3>Каналы</h3>
-                    <div class="pipe-caption">3-5 дней</div>
-                </div>
-                <div class="pipe">
-                    <h3>Креативы</h3>
-                    <div class="pipe-caption">1-2 дня</div>
-                </div>
-                <div class="pipe">
-                    <h3>Запуск</h3>
-                    <div class="pipe-caption">День 14</div>
-                </div>
-                <div class="pipe">
-                    <h3>Оптимизация</h3>
-                    <div class="pipe-caption">Непрерывно</div>
-                </div>
-                <div class="pipe">
-                    <h3>Отчёт</h3>
-                    <div class="pipe-caption">Еженедельно</div>
-                </div>
-            </div>
-            <p class="lead">14 дней от брифа до первого лида.</p>
-            <div class="proof-row">
-                <div class="panel">
+            <h2>Как вам поможет KUBRIK</h2>
+            <div class="grid-4">
+                <div class="card-glow">
+                    <div class="sol-num">01</div>
                     <h3>Системность</h3>
-                    <p>JTBD, Positioning Trout/Ries и Cialdini встроены в работу каждого направления.</p>
+                    <p>В сервис зашиты лучшие мировые практики и фреймворки.</p>
                 </div>
-                <div class="panel">
-                    <h3>Скорость</h3>
-                    <p>Десятки кампаний и креативов за сутки, а не по одному согласованию в неделю.</p>
+                <div class="card-glow">
+                    <div class="sol-num">02</div>
+                    <h3>Гиперскорость</h3>
+                    <p>Запускаем десятки рекламных кампаний за сутки.</p>
                 </div>
-                <div class="panel">
+                <div class="card-glow">
+                    <div class="sol-num">03</div>
                     <h3>Прозрачность</h3>
-                    <p>Единый дашборд со сквозной аналитикой от клика до сделки.</p>
+                    <p>Единый дашборд со сквозной аналитикой.</p>
+                </div>
+                <div class="card-glow">
+                    <div class="sol-num">04</div>
+                    <h3>Оптимизация</h3>
+                    <p>Сокращаем ФОТ и операционку.</p>
                 </div>
             </div>
+            <p class="tagline">Кратный рост эффективности маркетинга</p>
         </div>
     </section>
 
     <section class="slide">
         <div class="frame">
-            <div class="eyebrow">Каналы</div>
-            <h2>С какими площадками<br>работаем</h2>
-            <div class="grid-logos">
-                <div class="logo-group">
-                    <div class="group-label">Реклама</div>
-                    <h3>Платный трафик</h3>
-                    <div class="logo-grid">
-                        <span class="logo-chip">Яндекс Директ</span>
-                        <span class="logo-chip">VK Ads</span>
-                        <span class="logo-chip">Авито</span>
-                        <span class="logo-chip">Циан</span>
-                        <span class="logo-chip">Яндекс.Недвижимость</span>
-                        <span class="logo-chip">Google Ads</span>
-                        <span class="logo-chip">Meta</span>
-                        <span class="logo-chip">TikTok</span>
-                    </div>
+            <div class="eyebrow">Модель</div>
+            <h2>Как работает KUBRIK</h2>
+            <div class="quote-block">
+                <p class="quote-text">KUBRIK это огромная самообучающаяся сеть агентов и модулей, которые работают самостоятельно и согласовывают действия между собой. Мы автоматизируем рутину и усиливаем команду, а ключевые решения остаются под вашим контролем.</p>
+                <div class="divider" style="width:100%;"></div>
+                <p class="quote-text"><span class="quote-highlight">На вас будут работать:</span> Контекстолог, Аналитик, Дизайнер, Копирайтер, Таргетолог, Стратег, Медиапланер, Авитолог, специалисты по SMM, SEO, GEO и многие другие.</p>
+                <p class="quote-text"><span class="quote-highlight">Вы общаетесь с одним старшим представителем,</span> который координирует всю команду.</p>
+                <div class="divider" style="width:100%;"></div>
+                <p class="quote-text"><span class="quote-highlight">Если коротко:</span> вы получаете с десяток лучших специалистов на рынке, которые работают 24/7.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="slide platform-slide">
+        <div class="frame">
+            <div class="eyebrow">Площадки</div>
+            <h2>С какими площадками работает KUBRIK</h2>
+            <div class="brand-grid">
+                <div class="brand-item">
+                    <div class="brand-mark yandex"><span class="ya">Я</span><span>ндекс</span></div>
+                    <span>Яндекс</span>
                 </div>
-                <div class="logo-group">
-                    <div class="group-label">Контент</div>
-                    <h3>Контент и SEO</h3>
-                    <div class="logo-grid">
-                        <span class="logo-chip">Дзен</span>
-                        <span class="logo-chip">YouTube</span>
-                        <span class="logo-chip">Telegram</span>
-                        <span class="logo-chip">VK</span>
-                        <span class="logo-chip">VC</span>
-                        <span class="logo-chip">Reddit</span>
-                        <span class="logo-chip">LinkedIn</span>
-                    </div>
+                <div class="brand-item"><img src="assets/logos/google.svg" alt="Google"><span>Google</span></div>
+                <div class="brand-item">
+                    <div class="brand-mark dzen" aria-hidden="true"></div>
+                    <span>Дзен</span>
                 </div>
-                <div class="logo-group">
-                    <div class="group-label">Аналитика</div>
-                    <h3>Метрики и CRM</h3>
-                    <div class="logo-grid">
-                        <span class="logo-chip">Яндекс Метрика</span>
-                        <span class="logo-chip">Google Analytics</span>
-                        <span class="logo-chip">amoCRM</span>
-                        <span class="logo-chip">Bitrix24</span>
+                <div class="brand-item">
+                    <div class="brand-mark avito" aria-hidden="true">
+                        <span class="c1"></span>
+                        <span class="c2"></span>
+                        <span class="c3"></span>
+                        <span class="c4"></span>
                     </div>
+                    <span>Авито</span>
                 </div>
-                <div class="logo-group">
-                    <div class="group-label">Принцип</div>
-                    <h3>Не всё сразу</h3>
-                    <p>Подключаем только те каналы, которые реально работают для вашего рынка, продукта и бюджета.</p>
+                <div class="brand-item wordmark"><strong>Циан</strong><span>Недвижимость</span></div>
+                <div class="brand-item">
+                    <div class="brand-mark yandex"><span class="ya">Я</span><span>ндекс</span></div>
+                    <span>Яндекс.Недвижимость</span>
+                </div>
+                <div class="brand-item"><img src="assets/logos/instagram.svg" alt="Instagram"><span>Instagram</span></div>
+                <div class="brand-item"><img src="assets/logos/tiktok.svg" alt="TikTok"><span>TikTok</span></div>
+                <div class="brand-item"><img src="assets/logos/reddit.svg" alt="Reddit"><span>Reddit</span></div>
+                <div class="brand-item"><img src="assets/logos/youtube.svg" alt="YouTube"><span>YouTube</span></div>
+                <div class="brand-item"><img src="assets/logos/facebook.svg" alt="Facebook"><span>Facebook</span></div>
+                <div class="brand-item wordmark"><strong>VC</strong><span>Медиа</span></div>
+                <div class="brand-item wordmark"><strong>in</strong><span>LinkedIn</span></div>
+                <div class="brand-item"><img src="assets/logos/vk.svg" alt="VK"><span>VK</span></div>
+                <div class="brand-item"><img src="assets/logos/telegram.svg" alt="Telegram"><span>Telegram</span></div>
+                <div class="brand-item">
+                    <div class="brand-mark amocrm"><span class="amo">amo</span>CRM</div>
+                    <span>AmoCRM</span>
+                </div>
+                <div class="brand-item">
+                    <div class="brand-mark bitrix">Битрикс<span class="num24">24</span></div>
+                    <span>Битрикс24</span>
                 </div>
             </div>
+            <div class="divider"></div>
+            <p class="lead">Мы не очередной ваш подрядчик, а встроенный отдел маркетинга.</p>
         </div>
     </section>
 
     <section class="slide">
         <div class="frame">
-            <div class="eyebrow">Сегменты</div>
-            <h2>Кому подходит KUBRIK</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">01</div>
-                    <h3>Застройщики</h3>
-                    <p>От жилых комплексов до коммерческой недвижимости. РФ, Дубай, Бали, Таиланд.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">02</div>
-                    <h3>Агентства недвижимости</h3>
-                    <p>Масштабирование маркетинга без раздувания штата и потери темпа.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">03</div>
-                    <h3>Luxury-девелоперы</h3>
-                    <p>Точечная работа с высокомаржинальной аудиторией и длинным циклом сделки.</p>
-                </div>
-            </div>
-            <p class="lead">Фокус - недвижимость. Потому что мы знаем эту нишу изнутри.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="frame">
-            <div class="eyebrow">Демо</div>
-            <h2>Что вы получаете<br>на выходе</h2>
-            <div class="compare-grid">
-                <div class="mini-board">
-                    <div class="mini-board-header">
-                        <strong>Тестовый прогон: ЖК «Парковый»</strong>
-                        <span style="color: var(--muted);">31.03.2026</span>
-                    </div>
-                    <div class="mini-board-body">
-                        <div class="case-line"><strong>Стратегия:</strong> готова за 2 минуты</div>
-                        <div class="case-line"><strong>Медиаплан:</strong> бюджеты по каналам за 4 минуты</div>
-                        <div class="case-line"><strong>Креативы:</strong> 43 варианта под 7 платформ за 4 минуты</div>
-                        <div class="case-line"><strong>Валидация:</strong> policy compliance за 5 минут</div>
-                        <div class="case-line"><strong>Итог:</strong> объём работы на 2-3 недели отдела - за 17 минут</div>
-                    </div>
-                </div>
-                <div class="grid-4" style="grid-template-columns: repeat(2, 1fr);">
-                    <div class="metric">
-                        <div class="metric-label">Общее время</div>
-                        <div class="metric-value">17 мин</div>
-                        <p>Полный тест пайплайна от брифа до проверки.</p>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Креативы</div>
-                        <div class="metric-value">43</div>
-                        <p>Под разные сегменты и площадки.</p>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Бюджет</div>
-                        <div class="metric-value">500К</div>
-                        <p>Месячный медиаплан по тестовому объекту.</p>
-                    </div>
-                    <div class="metric">
-                        <div class="metric-label">Каналы</div>
-                        <div class="metric-value">7</div>
-                        <p>От Яндекс Директ до Telegram и Авито.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="footnote">Когда появится первый боевой клиент, этот слайд заменяется на кейс с CPL, лидами и конверсией.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="frame">
-            <div class="eyebrow">Онбординг</div>
-            <h2>Как подключиться</h2>
+            <div class="eyebrow">Подключение</div>
+            <h2>Как подключить</h2>
+            <p class="lead">Мы все сделаем за вас! Вы предоставляете данные - мы полностью готовый отдел маркетинга, за 14 дней.</p>
             <div class="grid-steps">
                 <div class="step">
                     <div class="step-index">1</div>
-                    <h3>Бриф</h3>
-                    <p>1 день. Вы даёте объект, бюджет, цели и материалы. Мы всё структурируем.</p>
+                    <h3>Бриф и данные</h3>
+                    <p>Вы предоставляете информацию о проекте и доступы.</p>
                 </div>
                 <div class="step">
                     <div class="step-index">2</div>
                     <h3>Настройка</h3>
-                    <p>7-10 дней. Стратегия, каналы, креативы и аналитика. Вы утверждаете ключевые решения.</p>
+                    <p>Мы подключаем площадки, аналитику и запускаем агентов.</p>
                 </div>
                 <div class="step">
                     <div class="step-index">3</div>
                     <h3>Запуск</h3>
-                    <p>День 14. Кампании работают, отчёты приходят, оптимизация идёт без пауз.</p>
+                    <p>Полностью готовый отдел маркетинга за 14 дней.</p>
                 </div>
             </div>
-            <p class="lead">Мы всё делаем за вас. Вы предоставляете данные - мы строим маркетинг.</p>
         </div>
     </section>
 
     <section class="slide">
-        <div class="frame">
-            <div class="eyebrow">Команда</div>
-            <h2>Кто за этим стоит</h2>
-            <div class="team-grid">
-                <div class="person">
-                    <div class="person-role">Продукт и архитектура</div>
-                    <h3>Максим Дробот</h3>
-                    <p>Отвечает за продукт, архитектуру системы, автоматизацию и то, чтобы маркетинг работал как единый механизм.</p>
-                </div>
-                <div class="person">
-                    <div class="person-role">Трафик и кабинеты</div>
-                    <h3>Дмитрий</h3>
-                    <p>Запуск и оптимизация рекламных кампаний. Яндекс Директ, Meta, медиапланирование и перформанс.</p>
-                </div>
-                <div class="person">
-                    <div class="person-role">Стратегия и развитие</div>
-                    <h3>Антон Новиков</h3>
-                    <p>Клиентская стратегия, упаковка оффера и развитие партнёрств со стороны бизнеса.</p>
-                </div>
-            </div>
-            <p class="lead">3 эксперта + AI = мощность 15 человек.</p>
-        </div>
-    </section>
-
-    <section class="slide">
-        <div class="frame">
+        <div class="frame" style="align-items:center; text-align:center;">
             <div class="eyebrow">Контакты</div>
             <h2>Давайте обсудим</h2>
-            <div class="contact-card">
-                <div class="contact-line"><strong>Telegram:</strong> @drobotmax</div>
-                <div class="contact-line"><strong>WhatsApp:</strong> по запросу</div>
-                <div class="contact-line"><strong>Email:</strong> drobotmaxim@gmail.com</div>
+            <div class="divider"></div>
+            <div class="contact-row">
+                <a class="contact-btn" href="#">Telegram</a>
+                <a class="contact-btn" href="#">WhatsApp</a>
             </div>
-            <p class="lead">Запишитесь на 30-минутную консультацию - покажем, как KUBRIK сработает для вашего объекта.</p>
         </div>
     </section>
 </main>

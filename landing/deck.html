@@ -176,6 +176,7 @@ h3 { font-size:1rem; font-weight:700; margin-bottom:.4rem; }
 /* Big number */
 .big-num { font-size:4rem; font-weight:900; color:var(--accent); line-height:1; }
 .big-label { font-size:.85rem; color:var(--text-2); margin-top:4px; }
+.stats-row { gap:48px; }
 
 /* Highlight bar */
 .highlight-bar {
@@ -200,13 +201,65 @@ h3 { font-size:1rem; font-weight:700; margin-bottom:.4rem; }
 .sep { height:1px; background:var(--border); margin:1.5rem 0; }
 
 @media (max-width:768px) {
-  h1 { font-size:2.8rem; }
-  h2 { font-size:1.6rem; }
-  .g2, .g3, .g4 { grid-template-columns:1fr; }
+  html, body { overflow:hidden; }
+  h1 { font-size:2.4rem; }
+  h2 { font-size:1.5rem; margin-bottom:1.2rem; }
+  h3 { font-size:.9rem; }
+  .subtitle { font-size:1rem; }
+  .label { font-size:.6rem; margin-bottom:.6rem; }
+
+  .slide {
+    padding:24px 20px;
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    align-items:flex-start;
+  }
+  .slide-inner { max-width:100%; padding-top:16px; padding-bottom:40px; }
+
+  .g2, .g3, .g4 { grid-template-columns:1fr; gap:12px; }
+
+  /* Cards */
+  .card { padding:20px; }
+  .card-icon { width:36px; height:36px; font-size:1.1rem; margin-bottom:10px; }
+  .card p { font-size:.82rem; padding:6px 0; }
+
+  /* Numbered cards */
+  .num-card { padding:20px; }
+  .num-card .num { font-size:1.8rem; margin-bottom:8px; }
+  .num-card p { font-size:.82rem; }
+
+  /* Compare table */
   .compare { grid-template-columns:1fr; }
-  .step-row { flex-direction:column; gap:12px; }
-  .step-arrow { transform:rotate(90deg); width:auto; height:32px; }
-  .slide { padding:24px; }
+  .compare-col { padding:24px 20px; }
+  .compare-row { font-size:.82rem; }
+  .compare-row .val { font-size:.85rem; }
+  .compare-total { font-size:.95rem; }
+
+  /* Platforms */
+  .pill { padding:6px 12px; font-size:.78rem; }
+  .pill-section { margin-bottom:12px; }
+
+  /* Stats row compact */
+  .big-num { font-size:1.2rem !important; }
+  .big-label { font-size:.58rem; }
+  .stats-row {
+    gap:0 !important;
+    background:var(--accent-light);
+    border-radius:12px;
+    padding:12px 0;
+  }
+  .stats-row > div { text-align:center; flex:1; }
+  .subtitle-mobile-gap { margin-bottom:1.5rem !important; }
+
+  /* How it works text */
+  .highlight-bar { font-size:.85rem; padding:14px 16px; }
+
+  /* CTA */
+  .cta-btn { padding:14px 24px; font-size:.9rem; }
+
+  /* Footer */
+  .slide-footer { left:20px; bottom:16px; font-size:.65rem; }
+  .counter { bottom:16px; right:20px; font-size:.6rem; }
 }
 </style>
 </head>
@@ -218,8 +271,8 @@ h3 { font-size:1rem; font-weight:700; margin-bottom:.4rem; }
   <div class="slide active" data-slide="0">
     <div class="slide-inner" style="text-align:center;">
       <h1 style="margin-bottom:1.5rem;">KUBRIK</h1>
-      <p class="subtitle" style="margin:0 auto 3rem; max-width:620px;">AI-маркетинг-отдел для девелоперов<br>и агентств недвижимости</p>
-      <div style="display:flex; gap:48px; justify-content:center;">
+      <p class="subtitle subtitle-mobile-gap" style="margin:0 auto 3rem; max-width:620px;">AI-маркетинг-отдел для девелоперов<br>и агентств недвижимости</p>
+      <div class="stats-row" style="display:flex; justify-content:center;">
         <div><div class="big-num">10+</div><div class="big-label">AI-специалистов</div></div>
         <div><div class="big-num">24/7</div><div class="big-label">без выходных</div></div>
         <div><div class="big-num">14</div><div class="big-label">дней на запуск</div></div>
@@ -464,11 +517,12 @@ h3 { font-size:1rem; font-weight:700; margin-bottom:.4rem; }
     e.clientX>innerWidth/2?go(cur+1):go(cur-1);
   });
 
-  let tx=0;
-  document.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX},{passive:true});
+  let tx=0,ty=0;
+  document.addEventListener('touchstart',e=>{tx=e.changedTouches[0].clientX;ty=e.changedTouches[0].clientY},{passive:true});
   document.addEventListener('touchend',e=>{
     let dx=e.changedTouches[0].clientX-tx;
-    if(Math.abs(dx)>50){dx<0?go(cur+1):go(cur-1);}
+    let dy=e.changedTouches[0].clientY-ty;
+    if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)*1.5){dx<0?go(cur+1):go(cur-1);}
   },{passive:true});
 })();
 </script>

@@ -1,4 +1,12 @@
-# KUBRIK News Pipeline Run | 2026-03-31
+# KUBRIK News Pipeline Run | 2026-04-06
+
+Articles: 5 | KB Updates: 0 | Notify Only: 3 | Skipped: 1
+
+> **Note:** Digest date is 2026-03-31 (6 days old). Этот дайджест уже был полностью обработан в прошлом запуске 2026-03-31 (см. changelog). Новых статей для обработки нет.
+
+---
+
+## Предыдущий запуск (2026-03-31) - архив
 
 Articles: 5 | KB Updates: 2 | Notify Only: 2 | Skipped: 1
 

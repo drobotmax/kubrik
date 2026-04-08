@@ -9,7 +9,7 @@
 Общая база знаний и рабочие материалы команды. Здесь живут:
 - Knowledge base для AI-агентов (книги, курсы, справочники платформ)
 - Клиентские папки с брифами, стратегиями, креативами и контент-планами
-- KUBRIK Pipeline агентов (стратег -> фактчекер -> таргетолог -> media planner -> копирайтер -> char-guard -> валидатор)
+- KUBRIK Pipeline агентов (стратег -> strategy council -> фактчекер -> таргетолог + контекстолог -> media planner -> копирайтер -> char-guard -> валидатор [generator-evaluator loop])
 
 ## AI-native operating model
 
@@ -33,6 +33,16 @@ KUBRIK строится не как набор разрозненных пром
 
 Минимальная цель на ближайший этап: у каждого клиента должны появляться не только deliverables, но и накопляемая операционная память.
 
+### Architecture patterns (из ai-native-product-skills)
+
+3 паттерна, внедрённых в pipeline:
+
+1. **Adversarial Council** (Strategy Council) - после Стратега, 3 изолированных персоны (застройщик, покупатель, конкурентный маркетолог) независимо оценивают стратегию. Sub-agent isolation, groupthink detection, adversarial debate. Решение: PASS / REVISE / ESCALATE.
+
+2. **Generator-Evaluator Loop** (Копирайтер + Валидатор) - Валидатор работает как isolated evaluator: получает только output-файлы без контекста создания. При REVISE - копирайтер дорабатывает + обязательно добавляет одно creative enhancement, о котором Валидатор не просил. Max 3 раунда, anti-anchoring (Валидатор не видит свои прошлые оценки).
+
+3. **File-Based Communication** - агенты общаются ТОЛЬКО через файлы. Никакой context passthrough. Полный протокол: `agents/references/agent-communication-protocol.md`. Даёт audit trail, клиентскую прозрачность, изоляцию и воспроизводимость.
+
 ## Навигация
 
 ```
@@ -49,14 +59,16 @@ knowledge/                  - база знаний (главный актив)
 
 agents/                     - определения AI-агентов (pipeline)
   strategist/skill.md       - агент-стратег (анализ рынка, ЦА, позиционирование)
+  strategy-council/skill.md - adversarial debate: 3 изолированных персоны challenge стратегию перед передачей дальше
   fact-checker/skill.md     - агент-фактчекер (верификация claims после стратега)
   targeting/skill.md        - агент-таргетолог (аудитории, гипотезы, тесты, оптимизация Meta/Instagram)
   media-buyer/skill.md      - агент media planner (budget arbitration, cross-channel planning, launch calendar)
   copywriter/skill.md       - агент-копирайтер (paid creatives + organic content plan при наличии SMM budget)
-  validator/skill.md        - агент-валидатор (QA: лимиты, policy, бриф)
+  validator/skill.md        - агент-валидатор (isolated evaluator, generator-evaluator loop с копирайтером, max 3 раунда)
   sales-qa/skill.md         - агент sales QA (разбор звонков, ICP fit, objections, next step)
   references/platform-specs.md - техтребования Meta/Google/Yandex
   references/sales-qa-checklist.md - чеклист quality review для отдела продаж
+  references/agent-communication-protocol.md - file-based communication protocol между агентами
 
 clients/                    - результаты работы по клиентам
   [client-slug]/            - brief.md, strategy.md, media-plan.md, creatives.md, content-plan.md, creatives.char-guard.md, validation.md
@@ -179,6 +191,7 @@ landing/                    - посадочные страницы
 clients/[client-slug]/
   brief.md          - исходный бриф
   strategy.md       - стратегия
+  strategy-council.md - результат adversarial debate (council)
   fact-check.md     - результат фактчека
   media-plan.md     - медиаплан
   creatives.md      - креативы

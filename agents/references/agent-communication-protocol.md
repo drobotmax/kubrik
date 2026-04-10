@@ -28,6 +28,9 @@
 | char-guard (скрипт) | `creatives.md` | `creatives.char-guard.md`, `creatives.char-guard.report.md` |
 | Валидатор | `brief.md`, `strategy.md`, `media-plan.md`, `creatives.char-guard.md` | `validation.md` |
 | Sales QA | `brief.md`, transcript/chat | `sales-qa.md` |
+| Аудитор кабинетов | `brief.md`, данные кабинета (текст/выгрузка) | `ad-audit.md` |
+| Аудитор лендинга | URL лендинга, `strategy.md` | `landing-audit.md` |
+| Аналитик усталости | данные кампаний, `creatives.md` | `creative-fatigue.md` |
 
 ## Правила
 
@@ -92,4 +95,26 @@ context-plan.md  targeting-plan.md
             +-- PASS --> готово
             +-- REVISE --> обратно к Копирайтеру (max 3 раунда)
             +-- BLOCKED --> эскалация на команду
+```
+
+## Standalone агенты (вне основного pipeline)
+
+Эти агенты запускаются отдельно, не являются частью последовательного pipeline.
+Могут использоваться до, во время или после основного прогона.
+
+```
+[Аудитор кабинетов]         <- standalone, на входе brief.md + данные кабинета
+    |                          запускается: при onboarding, каждые 2-4 недели
+    v
+ad-audit.md
+
+[Аудитор лендинга]          <- standalone, на входе URL + strategy.md
+    |                          запускается: перед запуском рекламы (блокер)
+    v
+landing-audit.md
+
+[Аналитик усталости]        <- standalone, на входе данные кампаний + creatives.md
+    |                          запускается: при падении метрик, каждые 2-4 недели
+    v
+creative-fatigue.md
 ```

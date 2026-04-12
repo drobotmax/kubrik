@@ -22,6 +22,7 @@ Detects spec changes, policy updates, and new features - then updates the knowle
 | TG: @directorologia | Telegram | Yandex Direct |
 | TG: @targetolog | Telegram | Meta/VK targeting |
 | TG: @caborobot | Telegram | Digital marketing |
+| Google Doc - weekly news sources | Curated manual source map | docs.google.com/document/d/1dEl-WA14JeVXHWFRs3d1_pVIEcFmT-PodV0AGzqVK0A/edit?tab=t.0 |
 
 ## Files
 
@@ -35,6 +36,7 @@ Detects spec changes, policy updates, and new features - then updates the knowle
 - Max 10 file edits per run
 - Confidence threshold 80% for spec changes
 - Telegram posts = secondary source only (never update specs from TG alone)
+- Curated docs can expand discovery, but cannot replace official source verification
 - All commits prefixed with `news-pipeline:` for easy rollback via `git revert`
 
 ## Manual run

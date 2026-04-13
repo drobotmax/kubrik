@@ -6,12 +6,28 @@
 <description>Google Ads &amp; Commerce</description>
 <atom:link href="https://blog.google/products/ads-commerce/rss/" rel="self"/>
 <language>en-us</language>
-<lastBuildDate>Thu, 26 Mar 2026 16:00:00 +0000</lastBuildDate>
+<lastBuildDate>Wed, 08 Apr 2026 13:00:00 +0000</lastBuildDate>
 <image>
 <url>https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Logo.max-80x80.format-webp.webp</url>
 <title>Google Ads &amp; Commerce</title>
 <link>https://blog.google/products/ads-commerce/</link>
 </image>
+<item>
+<title>AI is changing retail. Here’s how businesses can keep up.</title>
+<link>https://blog.google/products/ads-commerce/retail-sales-ai/</link>
+<media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Decoded_Podcast_-_Thumbnail_-_S.max-600x600.format-webp.webp" width="540"/>
+<description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Decoded_Podcast_-_Thumbnail_-_S.max-600x600.format-webp.webp"&gt;How retailers can adapt to the rapidly evolving advertising landscape, on the Ads Decoded Podcast.</description>
+<pubDate>Wed, 08 Apr 2026 13:00:00 +0000</pubDate>
+<guid>https://blog.google/products/ads-commerce/retail-sales-ai/</guid>
+<category>Google Ads</category>
+<og xmlns:og="http://ogp.me/ns#">
+<type>article</type>
+<title>AI is changing retail. Here’s how businesses can keep up.</title>
+<description/>
+<site_name>Google</site_name>
+<url>https://blog.google/products/ads-commerce/retail-sales-ai/</url>
+</og>
+</item>
 <item>
 <title>Upgrade your creative performance with March’s Demand Gen Drop.</title>
 <link>https://blog.google/products/ads-commerce/demand-gen-drop-march-2026/</link>
@@ -417,22 +433,6 @@
 <description/>
 <site_name>Google</site_name>
 <url>https://blog.google/products/ads-commerce/ads-decoded-podcast-collection/</url>
-</og>
-</item>
-<item>
-<title>Ads Decoded presents three AI strategies to master the future of marketing in 2026.</title>
-<link>https://blog.google/products/ads-commerce/ai-strategies-master-marketing-2026/</link>
-<media:content height="540" medium="image" url="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/decodedTakeaways_Social.max-600x600.format-webp.webp" width="540"/>
-<description>&lt;img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/decodedTakeaways_Social.max-600x600.format-webp.webp"&gt;A look at three AI strategies to master the future of marketing in 2026.</description>
-<pubDate>Wed, 28 Jan 2026 14:00:00 +0000</pubDate>
-<guid>https://blog.google/products/ads-commerce/ai-strategies-master-marketing-2026/</guid>
-<category>Google Ads</category>
-<og xmlns:og="http://ogp.me/ns#">
-<type>article</type>
-<title>Ads Decoded presents three AI strategies to master the future of marketing in 2026.</title>
-<description/>
-<site_name>Google</site_name>
-<url>https://blog.google/products/ads-commerce/ai-strategies-master-marketing-2026/</url>
 </og>
 </item>
 </channel>

@@ -96,3 +96,25 @@
 [2026-04-06 11:41:56]   Fetching: РСЯ для блогеров — один год: тренды покупок, категории-рекордсмены и показатели вовлечённости аудитории
 [2026-04-06 11:41:59]   -> saved (11306 bytes)
 [2026-04-06 11:41:59] Full texts fetched: 6
+[2026-04-06 11:41:59] WARNING: skipping large file (8220843 bytes): news-pipeline/cache/rss_824179e4a3f1.xml.split
+[2026-04-06 11:41:59] WARNING: skipping large file (8201873 bytes): news-pipeline/cache/rss_824179e4a3f1.xml
+[2026-04-06 11:41:59] WARNING: skipping large file (8225200 bytes): news-pipeline/cache/rss_443dc0a905bd.xml.split
+[2026-04-06 11:41:59] WARNING: skipping large file (8206214 bytes): news-pipeline/cache/rss_443dc0a905bd.xml
+[2026-04-06 11:41:59] Skipped 4 files over 1MB
+[2026-04-06 11:42:01] Pushed to news-data
+[2026-04-06 11:42:01] === KUBRIK News Fetch Complete ===
+[2026-04-13 05:00:01] === KUBRIK News Fetch Starting ===
+[2026-04-13 05:00:04] WARNING: git pull failed, continuing with local copy
+[2026-04-13 05:00:04] Period: 7 days (since 2026-04-06)
+[2026-04-13 05:00:04] Fetching: Google Ads Blog (google)...
+[2026-04-13 05:00:05]   -> 1 articles total so far
+[2026-04-13 05:00:05] Fetching: Yandex Ads News (yandex)...
+[2026-04-13 05:00:08]   -> 2 articles total so far
+[2026-04-13 05:00:08] Total articles fetched: 2
+[2026-04-13 05:00:08] Digest written: /home/maxos/kubrik/news-pipeline/data/digests/digest_2026-04-13.md
+[2026-04-13 05:00:08] Fetching full article texts...
+[2026-04-13 05:00:08]   Fetching: AI is changing retail. Here’s how businesses can keep up.
+[2026-04-13 05:00:11]   -> saved (1032 bytes)
+[2026-04-13 05:00:11]   Fetching: Лендинги в Директе: персонализация с помощью нейротехнологий и работа в условиях нестабильного интернета
+[2026-04-13 05:00:14]   -> saved (12324 bytes)
+[2026-04-13 05:00:14] Full texts fetched: 2
